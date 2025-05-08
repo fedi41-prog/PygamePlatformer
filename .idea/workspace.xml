@@ -4,18 +4,300 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="(:">
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/Platformer Art Complete Pack.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Backgrounds/bg_castle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Backgrounds/bg_desert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Backgrounds/bg_grasslands.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Backgrounds/bg_shroom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_front.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_spritesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_spritesheet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/PNG/p1_walk11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/p1_walk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_walk/p1_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_front.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_spritesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_spritesheet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/PNG/p2_walk11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/p2_walk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p2_walk/p2_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_front.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_spritesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_spritesheet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/PNG/p3_walk11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/p3_walk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p3_walk/p3_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxCoin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxCoinAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxCoinAlt_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxCoin_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxEmpty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxExplosive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxExplosiveAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxExplosive_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxItem.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxItemAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxItemAlt_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxItem_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/boxWarning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/brickWall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/bridge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/bridgeLogs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/castleRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/dirtRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/door_closedMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/door_closedTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/door_openMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/door_openTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/fence.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/fenceBroken.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/grassRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/hill_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/hill_largeAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/hill_small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/hill_smallAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/ladder_mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/ladder_top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/liquidLava.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/liquidLavaTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/liquidLavaTop_mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/liquidWater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/liquidWaterTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/liquidWaterTop_mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/lock_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/lock_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/lock_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/lock_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/rockHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/rockHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/ropeAttached.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/ropeHorizontal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/ropeVertical.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sandRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/sign.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/signExit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/signLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/signRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/snowRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/stoneWall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/tiles_spritesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/tiles_spritesheet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/tochLit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/tochLit2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/torch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/Tiles/window.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/tiles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/tiles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/sprites/Tiles/tiletest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/tools/collisionhelper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/tools/spritesheet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/GameV1/Game/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/GameV1/Game/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/GameV1/Game/entities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/GameV1/Game/scenes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/GameV1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/v1/Game_/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/v1/Game_/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/v1/Game_/entities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/v1/Game_/entities/player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/v1/Game_/scenes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/v1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/assets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/Player/p1_spritesheet.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/GameV1/Game/core/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/entities/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/entities/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/GameV1/Game/entities/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/GameV1/Game/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/scenes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/scenes/game_scene.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/GameV1/Game/scenes/game_scene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/Game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/GameV1/Game/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/run_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/GameV1/run_game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/GameV1/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/Game_/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/v1/Game_/core/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/Game_/entities/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/Game_/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/v1/Game_/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/Game_/scenes/game_scene.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/v1/Game_/scenes/game_scene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/Game_/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/v1/Game_/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/pygame_modular_template.zip" beforeDir="false" afterPath="$PROJECT_DIR$/test/v1/pygame_modular_template.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/pygame_starter_template.zip" beforeDir="false" afterPath="$PROJECT_DIR$/test/v1/pygame_starter_template.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,20 +313,38 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.game.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_game.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/images/spritesheets&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\spritesheets" />
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images" />
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\test" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer" />
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\v1\Game\mein_spiel\core" />
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\v1\Game\mein_spiel" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\v1" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Pygame-platformer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -53,11 +353,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/v1/pygame_starter_template/mein_spiel" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GameV1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/v1/pygame_starter_template/mein_spiel/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GameV1/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -68,7 +368,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.__init__" />
       </list>
     </recent_temporary>
   </component>
@@ -88,6 +388,27 @@
       <option name="presentableId" value="Default" />
       <updated>1746621483686</updated>
     </task>
+    <task id="LOCAL-00001" summary="(:">
+      <option name="closed" value="true" />
+      <created>1746623262863</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746623262863</updated>
+    </task>
+    <task id="LOCAL-00002" summary="(:">
+      <option name="closed" value="true" />
+      <created>1746623267659</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746623267659</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="(:" />
+    <option name="LAST_COMMIT_MESSAGE" value="(:" />
   </component>
 </project>
