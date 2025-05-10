@@ -3,3 +3,5 @@ WIDTH = 1024
 HEIGHT = 512
 FPS = 60
 TITLE = "Game"
+
+GRAVITY = 0.5

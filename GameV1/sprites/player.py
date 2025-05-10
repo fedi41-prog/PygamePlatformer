@@ -1,91 +1,64 @@
 import pygame
 import json
 from GameV1.tools.spritesheet import SpriteSheet
-from GameV1.tools.collisionhelper import CollisionHelper
-
-def resolve_platform_collision(player, platform, velocity):
-    """
-    Überprüft die Kollision und passt die Spielerposition so an, dass er nicht in die Plattform bohrt.
-    :param player: Spieler-Objekt
-    :param platform: Plattform-Objekt
-    :param velocity: Geschwindigkeit des Spielers
-    """
-    directions = CollisionHelper.detect_direction(player, platform)
-
-    if "bottom" in directions:  # Kollision mit der unteren Plattformkante
-        # Position des Spielers an die Plattform anpassen, um ein "Durchbohren" zu verhindern
-        player.rect.bottom = platform.rect.top
-        player.on_ground = True
-        velocity.y = 0  # Geschwindigkeit zurücksetzen, wenn der Spieler auf dem Boden ist
-    elif "top" in directions:  # Spieler trifft von oben auf die Plattform
-        player.rect.top = platform.rect.bottom
-        velocity.y = 0  # Geschwindigkeit zurücksetzen, wenn er auf der Plattform landet
-    elif "left" in directions or "right" in directions:
-        # Kollisionsbehandlung an den Seiten (optional für seitliche Kollision)
-        if "left" in directions:
-            player.rect.left = platform.rect.right
-        elif "right" in directions:
-            player.rect.right = platform.rect.left
-
-        velocity.x = 0  # Geschwindigkeit zurücksetzen, um das Durchrutschen zu verhindern
+from GameV1.tools.collisionhelper import CollisionHelper, CollisionResolver
+from GameV1.settings import GRAVITY
+from GameV1.assets.assets import AssetManager
 
 class Player:
     def __init__(self, x, y):
 
-        with open("assets/images/Player/p1_spritesheet.json", "r") as f:
-            rects = json.loads(f.read())
+        # load image
+        self.image_name = "p1_stand"
+        self.image = AssetManager.get("p1", self.image_name)
 
-        ss = SpriteSheet("assets/images/Player/p1_spritesheet.png")
-        self.images = ss.load_from_dict(rects, -1)
-        self.i = 4
-        self.image = self.images[self.i]
+        # create rect
+        margin = 6
 
-        self.mask = pygame.mask.from_surface(self.image)
+        self.rect = self.image.get_rect(topleft=(x, y))
+        self.hitbox = self.rect.inflate(margin, 0)  # oder dein margin
 
-
-        self.rect = self.image.get_rect()
-        self.rect.topleft = (x, y)
-
-        self.velocity_y = 0
+        # create mask
+        # kleinere Hitbox mit Abstand vom Rand
+        # Hitbox-Rand verkleinern (z. B. 6px an allen Seiten)
 
 
+        # Maske mit kleinerem Rechteck erzeugen
+        self.mask_image = pygame.Surface((self.rect.width, self.rect.height), pygame.SRCALPHA)
+        pygame.draw.rect(
+            self.mask_image,
+            (255, 0, 0),
+            self.hitbox
+        )
+
+        self.mask = pygame.mask.from_surface(self.mask_image)
+
+        # initialize velocity
+        self.velocity = pygame.math.Vector2(0, 0)
+
+        self.on_ground = False
 
     def update(self, platforms):
-
-        self.velocity_y += 1
-
         keys = pygame.key.get_pressed()
-        #if keys[pygame.K_LEFT]:
-        #    self.rect.x -= 1
-        #if keys[pygame.K_RIGHT]:
-        #    self.rect.x += 1
 
-        # im Player-Update
-        collision_helper = CollisionHelper()
+        # Springen
+        if keys[pygame.K_SPACE] and self.on_ground:
+            self.velocity.y = -15
 
-        directions = set()
+        # X-Bewegung
+        if keys[pygame.K_LEFT]:
+            self.velocity.x = -4
+        elif keys[pygame.K_RIGHT]:
+            self.velocity.x = 4
+        else:
+            self.velocity.x = 0
 
-        for p in platforms:
-            for i in collision_helper.detect_direction(self, p):
-                directions.add(i)
+        # Kollisionen
+        collision_resolver = CollisionResolver()
 
-        if directions:
-            print(f"Kollision auf Seite(n):", directions)
-            if "bottom" in directions:
-                self.velocity_y = -1
-            if not "left" in directions and keys[pygame.K_LEFT]:
-                self.rect.x -= 4
-            if not "right" in directions and keys[pygame.K_RIGHT]:
-                self.rect.x += 4
-
-        if keys[pygame.K_SPACE]:
-            self.velocity_y = -10
-
-
-
-        self.rect.y += self.velocity_y
-
-
+        collision_resolver.resolve_vertical(self, platforms, gravity=1)
+        collision_resolver.resolve_horizontal(self, platforms)
 
     def draw(self, screen):
-        screen.blit(self.images[self.i], self.rect)
+        screen.blit(self.image, self.rect)
+

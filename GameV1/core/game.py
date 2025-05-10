@@ -12,7 +12,7 @@ class Game:
 
 
         #load spritesheets (:
-        AssetManager.load_all_sheets_from_folder("assets/images/spritesheets", -1)
+        AssetManager.load_all_sheets_from_folder("assets/images/spritesheets")
 
 
         self.clock = pygame.time.Clock()

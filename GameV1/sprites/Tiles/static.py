@@ -2,12 +2,9 @@ import pygame
 from GameV1.assets.assets import AssetManager
 
 
-
-
-
-class TileTest:
-    def __init__(self, x, y):
-        self.image = AssetManager.get("tiles", "box.png").convert_alpha()
+class StaticBlock:
+    def __init__(self, x, y, name):
+        self.image = AssetManager.get("tiles", name)
         self.mask = pygame.mask.from_surface(self.image)
 
         self.rect = self.image.get_rect()
