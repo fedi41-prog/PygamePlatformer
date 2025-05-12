@@ -1,148 +1,89 @@
 import pygame
 
-class CollisionHelper:
-    def __init__(self, sample_rate=2, tolerance=3):
-        """
-        :param sample_rate: Schrittweite für Rand-Scan bei Richtungserkennung
-        :param tolerance: Toleranz in Pixeln für Kollisionen
-        """
-        self.sample_rate = sample_rate
-        self.tolerance = tolerance
-
-    def detect_direction(self, player, platform):
-        """Gibt eine Liste zurück mit den Richtungen der Kollision (z. B. ['top', 'left'])"""
-        offset = (platform.rect.x - player.rect.x, platform.rect.y - player.rect.y)
-        overlap = player.mask.overlap_mask(platform.mask, offset)
-
-        if overlap.count() == 0:
-            return []
-
-        directions = set()
-        ow, oh = overlap.get_size()
-
-        # horizontal (top / bottom)
-        for x in range(0, ow, self.sample_rate):
-            if overlap.get_at((x, 0)):
-                directions.add("top")
-            if overlap.get_at((x, oh - 1)):
-                directions.add("bottom")
-
-        # vertikal (left / right)
-        for y in range(0, oh, self.sample_rate):
-            if overlap.get_at((0, y)):
-                directions.add("left")
-            if overlap.get_at((ow - 1, y)):
-                directions.add("right")
-
-        return list(directions)
-
-    def resolve_sloped_collision(self, player, platform, velocity):
-        offset = (platform.rect.x - player.rect.x, platform.rect.y - player.rect.y)
-        overlap = player.mask.overlap_mask(platform.mask, offset)
-
-        if overlap.count() == 0:
-            return
-
-
-
-        # Wir scannen die Overlap-Maske nur, wenn der Spieler nach unten fällt
-        if velocity.y >= 0:
-            # Suche die tiefste sichtbare Y-Kollision innerhalb der Overlap-Maske
-            for dy in range(overlap.get_size()[1]):
-                for dx in range(0, overlap.get_size()[0], self.sample_rate):
-                    if overlap.get_at((dx, dy)):
-                        # Kollisionspunkt in Welt-Koordinaten
-                        player.rect.bottom = player.rect.top + dy
-                        velocity.y = 0
-                        player.on_ground = True
-                        return
-
-    def resolve_horizontal_collision(self, player, platform, velocity):
-        offset = (platform.rect.x - player.rect.x, platform.rect.y - player.rect.y)
-        overlap = player.mask.overlap_mask(platform.mask, offset)
-
-        if overlap.count() == 0:
-            return
-
-        # Nur prüfen, wenn Spieler sich horizontal bewegt
-        if velocity.x != 0:
-            width, height = overlap.get_size()
-
-            # Wir scannen von links nach rechts oder umgekehrt, je nach Bewegungsrichtung
-            scan_range = range(width) if velocity.x > 0 else range(width - 1, -1, -1)
-
-            for dx in scan_range:
-                for dy in range(0, height, self.sample_rate):
-                    if overlap.get_at((dx, dy)):
-                        # Wir haben einen Kollisionspunkt gefunden
-                        world_x = player.rect.left + dx
-
-                        if velocity.x > 0:
-                            # Spieler kam von links → rechter Rand blockiert
-                            player.rect.right = world_x
-                        else:
-                            # Spieler kam von rechts → linker Rand blockiert
-                            player.rect.left = world_x
-
-                        velocity.x = 0
-                        return
-
-
-import pygame
-
 class CollisionResolver:
-    def __init__(self, sample_rate=2):
+    def __init__(self, sample_rate=2, max_step_up=4, gravity=0.8, max_fall_speed=10):
         self.sample_rate = sample_rate
+        self.max_step_up = max_step_up
+        self.gravity = gravity
+        self.max_fall_speed = max_fall_speed
 
-    def resolve_vertical(self, player, platforms, gravity):
-        player.velocity.y += gravity
-        if player.velocity.y > 10:
-            player.velocity.y = 10
+    def resolve_vertical(self, player, platforms):
+        # Anwenden von Schwerkraft
+        player.velocity.y += self.gravity
+        if player.velocity.y > self.max_fall_speed:
+            player.velocity.y = self.max_fall_speed
 
+        # Vertikale Bewegung
         player.hitbox.y += player.velocity.y
+        player.update_mask()
         player.on_ground = False
 
+        # Kollisionserkennung und Korrektur
         for platform in platforms:
             offset = (platform.rect.x - player.hitbox.x, platform.rect.y - player.hitbox.y)
             overlap = player.mask.overlap_mask(platform.mask, offset)
-
             if overlap.count() > 0 and player.velocity.y >= 0:
-                for dy in range(overlap.get_size()[1]):
-                    for dx in range(0, overlap.get_size()[0], self.sample_rate):
+                # Pixelgenau Landung auf Plattformkante
+                w, h = overlap.get_size()
+                for dy in range(h):
+                    for dx in range(0, w, self.sample_rate):
                         if overlap.get_at((dx, dy)):
                             player.hitbox.bottom = player.hitbox.top + dy
                             player.velocity.y = 0
                             player.on_ground = True
-                            player.rect.centerx = player.hitbox.centerx
-                            player.rect.bottom = player.hitbox.bottom
+                            player.sync_rect()
                             return
-
-        player.rect.centerx = player.hitbox.centerx
-        player.rect.centery = player.hitbox.centery
+        # Rect synchronisieren
+        player.sync_rect()
 
     def resolve_horizontal(self, player, platforms):
+        # Horizontale Bewegung
         player.hitbox.x += player.velocity.x
+        player.update_mask()
 
         for platform in platforms:
             offset = (platform.rect.x - player.hitbox.x, platform.rect.y - player.hitbox.y)
             overlap = player.mask.overlap_mask(platform.mask, offset)
-
             if overlap.count() > 0:
-                width, height = overlap.get_size()
-                scan_range = range(width) if player.velocity.x > 0 else range(width - 1, -1, -1)
+                # Step-Up-Versuch nur bei Bodenkontakt
+                if player.on_ground and self.max_step_up > 0:
+                    stepped = False
+                    original_y = player.hitbox.y
+                    for step in range(1, self.max_step_up + 1):
+                        test_hitbox = player.hitbox.copy()
+                        test_hitbox.y = original_y - step
+                        player.update_mask(test_hitbox)
+                        test_offset = (platform.rect.x - test_hitbox.x, platform.rect.y - test_hitbox.y)
+                        test_overlap = player.mask.overlap_mask(platform.mask, test_offset)
+                        if test_overlap.count() == 0:
+                            player.hitbox = test_hitbox
+                            stepped = True
+                            break
+                    if not stepped:
+                        player.hitbox.y = original_y
+                        self.x_collision(player, platform)
+                else:
+                    self.x_collision(player, platform)
+                break
 
-                for dx in scan_range:
-                    for dy in range(0, height, self.sample_rate):
-                        if overlap.get_at((dx, dy)):
-                            world_x = player.hitbox.left + dx
-                            if player.velocity.x > 0:
-                                player.hitbox.right = world_x
-                            else:
-                                player.hitbox.left = world_x
-                            player.velocity.x = 0
-                            player.rect.centerx = player.hitbox.centerx
-                            player.rect.centery = player.hitbox.centery
-                            return
+        # Nach Kollision Rect synchronisieren
+        player.sync_rect()
 
-        player.rect.centerx = player.hitbox.centerx
-        player.rect.centery = player.hitbox.centery
+    def x_collision(self, player, platform):
+        # Pixelweise Rückschieben, bis keine Überlappung mehr besteht
+        original_x = player.hitbox.x
+        player_center = player.hitbox.centerx
+        direction = 1 if player_center < platform.rect.centerx else -1
+
+        # Wiederhole bis gesamter Überlapp gelöst ist
+        while True:
+            offset = (platform.rect.x - player.hitbox.x, platform.rect.y - player.hitbox.y)
+            overlap = player.mask.overlap_mask(platform.mask, offset)
+            if overlap.count() == 0:
+                break
+            player.hitbox.x -= direction
+
+        # Reset Geschwindigkeit
+        player.velocity.x = 0
+        player.update_mask()
+

@@ -5,18 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="(:">
-      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/p1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/sprites/Tiles/static.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienBeige.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienBeige.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienBlue.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienPink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienPink.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienYellow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/aliens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/aliens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/enemies.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/enemies.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/core/camera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/assets/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/assets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/p1.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreenWalk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/p1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreenWalk.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Tiles/tiletest.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Tiles/tiletest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Tiles/static.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Tiles/static.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/sprites/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/tools/collisionhelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/tools/collisionhelper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/tools/spritesheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/tools/spritesheet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,24 +52,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.game.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_game.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/images/spritesheets&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.__init__.executor": "Run",
+    "Python.game.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.run_game.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\spritesheets" />
@@ -143,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746722958481</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="(:">
+      <option name="closed" value="true" />
+      <created>1746860049536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746860049536</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

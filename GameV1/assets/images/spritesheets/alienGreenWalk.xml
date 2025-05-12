@@ -1,0 +1,20 @@
+<TextureAtlas imagePath="p1_sp ritesheet.png">
+
+    <SubTexture name="alienGreen_duck" x="365" y="98" width="69" height="71"/>
+    <SubTexture name="alienGreen_front" x="0" y="196" width="66" height="92"/>
+    <SubTexture name="alienGreen_hurt" x="438" y="0" width="69" height="92"/>
+    <SubTexture name="alienGreen_stand" x="67" y="196" width="66" height="92"/>
+    <SubTexture name="alienGreen_jump" x="438" y="438" width="72" height="94"/>
+    <SubTexture name="alienGreen_walk01" x="0" y="0" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk02" x="73" y="0" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk03" x="146" y="0" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk04" x="0" y="98" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk05" x="73" y="98" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk06" x="146" y="98" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk07" x="219" y="0" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk08" x="292" y="0" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk09" x="219" y="98" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk10" x="365" y="0" width="72" height="97"/>
+    <SubTexture name="alienGreen_walk11" x="292" y="98" width="72" height="97"/>
+
+</TextureAtlas>
