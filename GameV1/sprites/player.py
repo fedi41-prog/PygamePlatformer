@@ -20,23 +20,25 @@ class Player:
         pygame.draw.rect(surface, (255, 0, 0), hitbox)
         self.mask = pygame.mask.from_surface(surface)
 
-    def __init__(self, x, y):
+    def __init__(self, x, y, texture_key):
         # Bild laden
+        self.texture_key = texture_key
+
         self.walkAnimation = [
-            "alienGreen_walk01",
-            "alienGreen_walk02",
-            "alienGreen_walk03",
-            "alienGreen_walk04",
-            "alienGreen_walk05",
-            "alienGreen_walk06",
-            "alienGreen_walk07",
-            "alienGreen_walk08",
-            "alienGreen_walk09",
-            "alienGreen_walk10",
-            "alienGreen_walk11"
+            "_walk01.png",
+            "_walk02.png",
+            "_walk03.png",
+            "_walk04.png",
+            "_walk05.png",
+            "_walk06.png",
+            "_walk07.png",
+            "_walk08.png",
+            "_walk09.png",
+            "_walk10.png",
+            "_walk11.png"
         ]
         self.walkStep = 0
-        self.image = AssetManager.get("alienGreen", "alienGreen_stand.png")
+        self.image = AssetManager.get(self.texture_key, self.texture_key + "_stand.png")
 
         # Gesamtrechteck (für Anzeige)
         self.rect = self.image.get_rect()
@@ -85,17 +87,17 @@ class Player:
         self.update_image()
         screen.blit(self.image, camera.apply(self.rect))
         # Optional: Hitbox zum Debuggen anzeigen
-        # pygame.draw.rect(screen, (0, 255, 0), self.hitbox, 2)
+        # pygame.draw.rect(screen, (0, 255, 0), camera.apply(self.hitbox), 2)
     def update_image(self):
         if not self.on_ground:
-            self.image = AssetManager.get("alienGreen", "alienGreen_jump.png")
+            self.image = AssetManager.get(self.texture_key, self.texture_key + "_jump.png")
         elif self.velocity.x != 0:
-            self.image = AssetManager.get("alienGreenWalk", self.walkAnimation[int(self.walkStep)])
+            self.image = AssetManager.get(self.texture_key + "Walk", self.texture_key + self.walkAnimation[int(self.walkStep)])
             self.walkStep += 0.35
             if self.walkStep >= len(self.walkAnimation):
                 self.walkStep = 0
         else:
-            self.image = AssetManager.get("alienGreen", "alienGreen_stand.png")
+            self.image = AssetManager.get(self.texture_key, self.texture_key + "_stand.png")
 
         if self.direction == "left":
             self.image = pygame.transform.flip(self.image, True, False)

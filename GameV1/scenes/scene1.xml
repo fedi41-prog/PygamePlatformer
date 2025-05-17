@@ -1,0 +1,29 @@
+<GameScene length="2000" height="512">
+
+    <Player textures="alienGreen" x="270" y="150"/>
+    <Background path="assets/images/Backgrounds/bg_grasslands.png" parallax="0.3"/>
+
+    <Sprites>
+        <StaticBlock texture="grassLeft.png" x="200" y="300"/>
+        <StaticBlock texture="grassMid.png" x="270" y="300"/>
+        <StaticBlock texture="grassMid.png" x="340" y="300"/>
+        <StaticBlock texture="grassMid.png" x="410" y="300"/>
+        <StaticBlock texture="boxAlt.png" x="410" y="230"/>
+        <StaticBlock texture="grassMid.png" x="480" y="300"/>
+        <StaticBlock texture="grassMid.png" x="550" y="300"/>
+        <StaticBlock texture="boxItem.png" x="550" y="110"/>
+        <StaticBlock texture="grassMid.png" x="620" y="300"/>
+        <StaticBlock texture="grassHillLeft2.png" x="690" y="300"/>
+        <StaticBlock texture="grassHillLeft.png" x="690" y="230"/>
+        <StaticBlock texture="grassCenter.png" x="760" y="300"/>
+        <StaticBlock texture="grassMid.png" x="760" y="230"/>
+        <StaticBlock texture="boxExplosive.png" x="760" y="20"/>
+        <StaticBlock texture="grassHillRight2.png" x="830" y="300"/>
+        <StaticBlock texture="grassHillRight.png" x="830" y="230"/>
+        <StaticBlock texture="grassMid.png" x="900" y="300"/>
+        <StaticBlock texture="grassMid.png" x="970" y="300"/>
+        <StaticBlock texture="grassMid.png" x="1040" y="300"/>
+        <StaticBlock texture="grassLedgeRight.png" x="1110" y="300"/>
+    </Sprites>
+
+</GameScene>

@@ -17,8 +17,7 @@ class Game:
 
         self.clock = pygame.time.Clock()
         self.running = True
-        self.scene = GameScene(self)
-
+        self.scene = GameScene.generate_scene_from_xml(self, "scenes/scene2.xml")
     def run(self):
         while self.running:
             self.scene.handle_events()

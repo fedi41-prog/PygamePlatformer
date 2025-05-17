@@ -1,0 +1,49 @@
+<GameScene length="5000" height="1512">
+
+    <Player textures="alienGreen" x="270" y="1150"/>
+    <Background path="assets/images/Backgrounds/bg_grasslands.png" parallax="0.3"/>
+
+    <Sprites>
+        <StaticBlock sheet="tiles" texture="grassLeft.png" x="200" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="270" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="340" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="410" y="1300"/>
+        <StaticBlock sheet="tiles" texture="boxAlt.png" x="410" y="1230"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="480" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="550" y="1300"/>
+        <StaticBlock sheet="tiles" texture="boxItem.png" x="570" y="1110"/>
+        <Coin sheet="items" texture="coinGold.png" x="570" y="1040"/>
+        <Deco sheet="items" texture="bush.png" x="570" y="1230"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="620" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassHillLeft2.png" x="690" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassHillLeft.png" x="690" y="1230"/>
+        <StaticBlock sheet="tiles" texture="grassCenter.png" x="760" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="760" y="1230"/>
+        <StaticBlock sheet="tiles" texture="boxExplosive.png" x="760" y="1020"/>
+
+
+        <MovingBlock sheet="tiles" texture="castleHalf.png" x="830" y="1020" xd="830" yd="300" speed="5"/>
+        <StaticBlock sheet="tiles" texture="castleHalfRight.png" x="760" y="300"/>
+        <StaticBlock sheet="tiles" texture="castleHalfMid.png" x="690" y="300"/>
+        <StaticBlock sheet="tiles" texture="castleHalfLeft.png" x="620" y="300"/>
+
+        <StaticBlock sheet="tiles" texture="castleHalfRight.png" x="410" y="230"/>
+        <StaticBlock sheet="tiles" texture="castleHalfLeft.png" x="340" y="230"/>
+        <Flag color="Green" x="380" y="160"/>
+
+
+        <StaticBlock sheet="tiles" texture="grassHillRight2.png" x="830" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassHillRight.png" x="830" y="1230"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="900" y="1300"/>
+
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="970" y="1300"/>
+        <Deco sheet="items" texture="plant.png" x="970" y="1230"/>
+        <StaticBlock sheet="tiles" texture="grassMid.png" x="1040" y="1300"/>
+        <StaticBlock sheet="tiles" texture="grassLedgeRight.png" x="1110" y="1300"/>
+
+        <MovingBlock sheet="tiles" texture=".png" x="1110" y="1300" xd="2000" yd="1300" speed="3"/>
+
+
+    </Sprites>
+
+</GameScene>

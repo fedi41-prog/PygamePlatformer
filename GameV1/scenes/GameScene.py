@@ -1,42 +1,31 @@
 import pygame
+import xml.etree.ElementTree as ET
 
 from GameV1.core.camera import Camera
+from GameV1.sprites.Entities.coin import Coin
+from GameV1.sprites.Entities.deco import Deco
+from GameV1.sprites.Entities.flag import Flag
+from GameV1.sprites.StaticBlocks.staticblock import StaticBlock
+from GameV1.sprites.UpdateBlocks.MovingBlock import MovingBlock
 from GameV1.sprites.player import Player
-from GameV1.settings import *
-from GameV1.sprites.Tiles.static import StaticBlock
+from GameV1.settings import WIDTH, HEIGHT
 
 class GameScene:
-    def __init__(self, game):
+    def __init__(self, game, lvl_size, static_blocks, update_blocks, entities, player, background_image, parallax=0.5):
         self.game = game
-        self.player = Player(100, 50)
-        self.blocks = [
+        self.level_length, self.level_height = lvl_size
+        self.static_blocks = static_blocks
+        self.update_blocks = update_blocks
+        self.entities = entities
+        self.player = player
 
-            StaticBlock(100, 270, "grassLeft.png"),
-            StaticBlock(170, 270, "grassHillLeft2.png"),
-            StaticBlock(240, 270, "grassCenter.png"),
-            StaticBlock(310, 270, "grassCenter.png"),
-            StaticBlock(380, 270, "grassCenter.png"),
-            StaticBlock(170, 200, "grassHillLeft.png"),
-            StaticBlock(240, 200, "grassMid.png"),
-            StaticBlock(310, 200, "grassMid.png"),
-            StaticBlock(380, 200, "grassMid.png"),
-            StaticBlock(310, 130, "boxAlt.png"),
-            StaticBlock(450, 200, "castleHalfMid.png"),
-            StaticBlock(520, 200, "castleHalfMid.png"),
-            StaticBlock(590, 200, "castleHalfMid.png"),
-            StaticBlock(660, 200, "castleHalfMid.png"),
-            StaticBlock(730, 200, "castleHalfMid.png"),
+        # Hintergrundbild
+        self.background_image = background_image
+        # Parallax-Faktor (kleiner als 1 = langsamer als Vordergrund)
+        self.parallax = parallax
 
-        ]
-
-        self.background_image = pygame.image.load("assets/images/Backgrounds/bg_grasslands.png")
-        self.rect = self.background_image.get_rect()
-        self.rect.x, self.rect.y = WIDTH/2 - self.rect.width/2, HEIGHT/2 - self.rect.height/2
-
-        self.level_width = 2000
-        self.level_height = HEIGHT + 500
-
-        self.camera = Camera(800, 600, self.level_width, self.level_height)
+        # Kamera initialisieren
+        self.camera = Camera(WIDTH, HEIGHT, self.level_length, self.level_height)
 
     def handle_events(self):
         for event in pygame.event.get():
@@ -44,18 +33,130 @@ class GameScene:
                 self.game.running = False
 
     def update(self):
-        self.player.update(self.blocks)
+        self.entities = [e for e in self.entities if not getattr(e, 'to_remove', False)]
+
+        # Update beweglicher Blocks und Entities
+        for obj in self.update_blocks + self.entities:
+            obj.update(self.player)
+
+        # Spieler-Update mit allen Kollisionen
+        self.player.update(self.static_blocks + self.update_blocks)
+
+        # Kamera folgt Spieler
         self.camera.update(self.player.hitbox)
 
     def draw(self, screen):
+        # Sichtbarer Viewport in Welt-Koordinaten
+        view_rect = pygame.Rect(
+            int(self.camera.offset.x),
+            int(self.camera.offset.y),
+            WIDTH,
+            HEIGHT
+        )
 
-        # Zeichnen
-        screen.blit(self.background_image, self.rect)
+        # Hintergrund kacheln und scrollen mit Parallax-Effekt
+        bg_w, bg_h = self.background_image.get_size()
+        offset_x = int(self.camera.offset.x * self.parallax) % bg_w
+        for x in range(-offset_x, WIDTH, bg_w):
+            for y in range(0, HEIGHT, bg_h):
+                screen.blit(self.background_image, (x, y))
 
-        for b in self.blocks:
-            b.draw(screen, self.camera)
+        # Kombinierte Liste aller Objekte mit .rect und .draw
+        all_drawables = self.static_blocks + self.update_blocks + self.entities
 
+        for obj in all_drawables:
+            if obj.rect.colliderect(view_rect):
+                obj.draw(screen, self.camera)
+
+        # Spieler zeichnen
         self.player.draw(screen, self.camera)
 
         pygame.display.flip()
 
+    @staticmethod
+    def generate_scene_from_xml(game, filename):
+        import xml.etree.ElementTree as ET
+
+        tree = ET.parse(filename)
+        root = tree.getroot()
+
+        length = int(root.get('length', 0))
+        height = int(root.get('height', 0))
+
+        # Hintergrund
+        bg_elem = root.find('Background')
+        bg_img = pygame.image.load(bg_elem.get('path')).convert()
+        parallax = float(bg_elem.get('parallax', 0.5))
+
+        # Spieler
+        pl = root.find('Player')
+        player = Player(
+            x=int(pl.get('x', 0)),
+            y=int(pl.get('y', 0)),
+            texture_key=pl.get('textures')
+        )
+
+        static_blocks = []
+        update_blocks = []
+        entities = []
+
+        # Factory-Map, die für jeden Tag das richtige Objekt baut
+        factories = {
+            'StaticBlock': lambda e: StaticBlock(
+                x=int(e.get('x', 0)),
+                y=int(e.get('y', 0)),
+                sheet=e.get('sheet'),
+                texture=e.get('texture')
+            ),
+            'MovingBlock': lambda e: MovingBlock(
+                x=int(e.get('x', 0)),
+                y=int(e.get('y', 0)),
+                xd=int(e.get('xd', 0)),
+                yd=int(e.get('yd', 0)),
+                sheet=e.get('sheet'),
+                texture=e.get('texture'),
+                speed=int(e.get('speed', 2))
+            ),
+            'Flag': lambda e: Flag(
+                x=int(e.get('x', 0)),
+                y=int(e.get('y', 0)),
+                color=e.get('color')
+            ),
+            'Coin': lambda e: Coin(
+                x=int(e.get('x', 0)),
+                y=int(e.get('y', 0)),
+                sheet=e.get('sheet'),
+                texture=e.get('texture')
+            ),
+            'Deco': lambda e: Deco(
+                x=int(e.get('x', 0)),
+                y=int(e.get('y', 0)),
+                sheet=e.get('sheet'),
+                texture=e.get('texture')
+            ),
+        }
+
+        sprites_root = root.find('Sprites')
+        if sprites_root is not None:
+            for elem in sprites_root:
+                tag = elem.tag
+                if tag in factories:
+                    obj = factories[tag](elem)
+                    # je nach Typ in die richtige Liste
+                    if tag == 'StaticBlock':
+                        static_blocks.append(obj)
+                    elif tag == 'MovingBlock':
+                        update_blocks.append(obj)
+                    else:
+                        entities.append(obj)
+
+        return GameScene(
+            game=game,
+            lvl_size=(length, height),
+            static_blocks=static_blocks,
+            update_blocks=update_blocks,
+            entities=entities,
+            player=player,
+            background_image=bg_img,
+            parallax=parallax
+        )
