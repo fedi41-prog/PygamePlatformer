@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="camera movement, collision, walk animation">
-      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/items.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/items.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/scenes/scene1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/scenes/scene2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/deco.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/flag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/sprites/UpdateBlocks/MovingBlock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreenWalk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreenWalk.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/core/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/camera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Tiles/static.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/StaticBlocks/staticblock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Tiles/tiletest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/tools/collisionhelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/tools/collisionhelper.py" afterDir="false" />
-    </list>
+    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="small changes - new platform types, also better camera movement" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,12 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1747034394955</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="small changes - new platform types, also better camera movement">
+      <option name="closed" value="true" />
+      <created>1747465309731</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747465309731</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="(:" />
     <MESSAGE value="camera movement, collision, walk animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="camera movement, collision, walk animation" />
+    <MESSAGE value="small changes - new platform types, also better camera movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes - new platform types, also better camera movement" />
   </component>
 </project>
