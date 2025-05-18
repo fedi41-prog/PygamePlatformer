@@ -20,7 +20,9 @@ class Player:
         pygame.draw.rect(surface, (255, 0, 0), hitbox)
         self.mask = pygame.mask.from_surface(surface)
 
-    def __init__(self, x, y, texture_key):
+    def __init__(self, x, y, texture_key, gravity, max_fall_speed, jump_power):
+        self.gravity, self.max_fall_speed, self.jump_power = gravity, max_fall_speed, jump_power
+
         # Bild laden
         self.texture_key = texture_key
 
@@ -67,7 +69,7 @@ class Player:
         keys = pygame.key.get_pressed()
 
         if (keys[pygame.K_SPACE] or keys[pygame.K_UP] or keys[pygame.K_w]) and self.on_ground:
-            self.velocity.y = -15
+            self.velocity.y = -self.jump_power
 
         if keys[pygame.K_LEFT] or keys[pygame.K_a]:
             self.velocity.x = -4
@@ -79,7 +81,7 @@ class Player:
             self.velocity.x = 0
 
         # Kollisionen lösen
-        collision_resolver = CollisionResolver()
+        collision_resolver = CollisionResolver(gravity=self.gravity, max_fall_speed=self.max_fall_speed)
         collision_resolver.resolve_vertical(self, platforms)
         collision_resolver.resolve_horizontal(self, platforms)
 
@@ -87,7 +89,7 @@ class Player:
         self.update_image()
         screen.blit(self.image, camera.apply(self.rect))
         # Optional: Hitbox zum Debuggen anzeigen
-        # pygame.draw.rect(screen, (0, 255, 0), camera.apply(self.hitbox), 2)
+        pygame.draw.rect(screen, (0, 255, 0), camera.apply(self.hitbox), 2)
     def update_image(self):
         if not self.on_ground:
             self.image = AssetManager.get(self.texture_key, self.texture_key + "_jump.png")

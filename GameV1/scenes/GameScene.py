@@ -8,10 +8,10 @@ from GameV1.sprites.Entities.flag import Flag
 from GameV1.sprites.StaticBlocks.staticblock import StaticBlock
 from GameV1.sprites.UpdateBlocks.MovingBlock import MovingBlock
 from GameV1.sprites.player import Player
-from GameV1.settings import WIDTH, HEIGHT
+from GameV1.settings import VIRTUAL_WIDTH, VIRTUAL_HEIGHT
 
 class GameScene:
-    def __init__(self, game, lvl_size, static_blocks, update_blocks, entities, player, background_image, parallax=0.5):
+    def __init__(self, game, lvl_size, static_blocks, update_blocks, entities, player, background_image, parallax=0.3):
         self.game = game
         self.level_length, self.level_height = lvl_size
         self.static_blocks = static_blocks
@@ -25,12 +25,15 @@ class GameScene:
         self.parallax = parallax
 
         # Kamera initialisieren
-        self.camera = Camera(WIDTH, HEIGHT, self.level_length, self.level_height)
+        self.camera = Camera(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, self.level_length, self.level_height)
 
     def handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.game.running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    self.game.running = False
 
     def update(self):
         self.entities = [e for e in self.entities if not getattr(e, 'to_remove', False)]
@@ -50,15 +53,15 @@ class GameScene:
         view_rect = pygame.Rect(
             int(self.camera.offset.x),
             int(self.camera.offset.y),
-            WIDTH,
-            HEIGHT
+            VIRTUAL_WIDTH,
+            VIRTUAL_HEIGHT
         )
 
         # Hintergrund kacheln und scrollen mit Parallax-Effekt
         bg_w, bg_h = self.background_image.get_size()
         offset_x = int(self.camera.offset.x * self.parallax) % bg_w
-        for x in range(-offset_x, WIDTH, bg_w):
-            for y in range(0, HEIGHT, bg_h):
+        for x in range(-offset_x, VIRTUAL_WIDTH, bg_w):
+            for y in range(0, VIRTUAL_HEIGHT, bg_h):
                 screen.blit(self.background_image, (x, y))
 
         # Kombinierte Liste aller Objekte mit .rect und .draw
@@ -93,7 +96,10 @@ class GameScene:
         player = Player(
             x=int(pl.get('x', 0)),
             y=int(pl.get('y', 0)),
-            texture_key=pl.get('textures')
+            texture_key=pl.get('textures'),
+            gravity=float(pl.get("gravity")),
+            max_fall_speed=int(pl.get("max_fall_speed")),
+            jump_power=int(pl.get("jump_power"))
         )
 
         static_blocks = []
