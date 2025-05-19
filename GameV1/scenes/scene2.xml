@@ -1,6 +1,6 @@
-<GameScene length="5000" height="1512">
+<GameScene length="5000" height="2000">
 
-    <Player textures="alienGreen" x="270" y="1150"/>
+    <Player textures="alienGreen" x="270" y="1150" gravity="0.8" max_fall_speed="15" jump_power="15"/>
     <Background path="assets/images/Backgrounds/bg_grasslands.png" parallax="0.3"/>
 
     <Sprites>
@@ -41,7 +41,10 @@
         <StaticBlock sheet="tiles" texture="grassMid.png" x="1040" y="1300"/>
         <StaticBlock sheet="tiles" texture="grassLedgeRight.png" x="1110" y="1300"/>
 
-        <MovingBlock sheet="tiles" texture=".png" x="1110" y="1300" xd="2000" yd="1300" speed="3"/>
+        <MovingBlock sheet="enemies" texture="slimeBlock.png" x="1110" y="1300" xd="2000" yd="1300" speed="3"/>
+
+        <StaticBlock sheet="tiles" texture="stoneLeft.png" x="2050" y="1300"/>
+        <StaticBlock sheet="tiles" texture="stoneRight.png" x="2120" y="1300"/>
 
 
     </Sprites>
