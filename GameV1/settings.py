@@ -5,4 +5,4 @@ VIRTUAL_HEIGHT = 432
 FPS = 60
 TITLE = "Game"
 
-GRAVITY = 0.5
+HACKS = True

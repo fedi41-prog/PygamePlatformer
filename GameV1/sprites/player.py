@@ -1,6 +1,6 @@
 import pygame
 from GameV1.assets.assets import AssetManager
-from GameV1.settings import GRAVITY
+from GameV1.settings import HACKS
 from GameV1.tools.collisionhelper import CollisionResolver
 
 class Player:
@@ -22,6 +22,7 @@ class Player:
 
     def __init__(self, x, y, texture_key, gravity, max_fall_speed, jump_power):
         self.gravity, self.max_fall_speed, self.jump_power = gravity, max_fall_speed, jump_power
+        self.normal_jump_power = jump_power
 
         # Bild laden
         self.texture_key = texture_key
@@ -45,6 +46,7 @@ class Player:
         # Gesamtrechteck (für Anzeige)
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
+        self.home_pos = (x, y)
 
 
         margin = 10
@@ -65,31 +67,65 @@ class Player:
 
         self.direction = "right"
 
+        self.slam_active = False
+        self.slam_speed = 40  # Geschwindigkeit des Slam
+        self.slam_cooldown = 0  # Optional: Cooldown-Timer
+
+
     def update(self, platforms):
         keys = pygame.key.get_pressed()
 
-        if (keys[pygame.K_SPACE] or keys[pygame.K_UP] or keys[pygame.K_w]) and self.on_ground:
+        if (keys[pygame.K_SPACE] or keys[pygame.K_UP]) and self.on_ground:
             self.velocity.y = -self.jump_power
 
-        if keys[pygame.K_LEFT] or keys[pygame.K_a]:
+        if keys[pygame.K_LEFT]:
             self.velocity.x = -4
             self.direction = "left"
-        elif keys[pygame.K_RIGHT] or keys[pygame.K_d]:
+        elif keys[pygame.K_RIGHT]:
             self.velocity.x = 4
             self.direction = "right"
         else:
             self.velocity.x = 0
+
+        if keys[pygame.K_DOWN] and not self.on_ground and self.slam_cooldown <= 0:
+            self.slam_active = True
+            self.velocity.y = self.slam_speed  # Fallgeschwindigkeit
+
+        '''HACKCODE'''
+
+        if HACKS:
+            if keys[pygame.K_q]:
+                self.hitbox.topleft = self.home_pos
+            if keys[pygame.K_w]:
+                self.velocity.y = -5
+
+            if keys[pygame.K_F6]:
+                self.jump_power = self.normal_jump_power
+            elif keys[pygame.K_F7]:
+                self.jump_power -= 1
+            elif keys[pygame.K_F8]:
+                self.jump_power += 1
+
+        '''HACKCODE'''
 
         # Kollisionen lösen
         collision_resolver = CollisionResolver(gravity=self.gravity, max_fall_speed=self.max_fall_speed)
         collision_resolver.resolve_vertical(self, platforms)
         collision_resolver.resolve_horizontal(self, platforms)
 
+        if self.on_ground and self.slam_active:
+            #TODO: self.trigger_slam_effect()
+            self.slam_active = False
+            self.slam_cooldown = 30  # z. B. 0,5 Sekunden Cooldown
+
+        if self.slam_cooldown > 0:
+            self.slam_cooldown -= 1
+
     def draw(self, screen, camera):
         self.update_image()
         screen.blit(self.image, camera.apply(self.rect))
         # Optional: Hitbox zum Debuggen anzeigen
-        pygame.draw.rect(screen, (0, 255, 0), camera.apply(self.hitbox), 2)
+        # pygame.draw.rect(screen, (0, 255, 0), camera.apply(self.hitbox), 2)
     def update_image(self):
         if not self.on_ground:
             self.image = AssetManager.get(self.texture_key, self.texture_key + "_jump.png")

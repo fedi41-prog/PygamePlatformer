@@ -10,7 +10,7 @@ class CollisionResolver:
     def resolve_vertical(self, player, platforms):
         # Schwerkraft anwenden
         player.velocity.y += self.gravity
-        if player.velocity.y > self.max_fall_speed:
+        if player.velocity.y > self.max_fall_speed and not player.slam_active:
             player.velocity.y = self.max_fall_speed
 
         # Vertikale Bewegung
@@ -29,7 +29,7 @@ class CollisionResolver:
                     for dy in range(h):
                         for dx in range(0, w, self.sample_rate):
                             if overlap.get_at((dx, dy)):
-                                player.hitbox.bottom = player.hitbox.top   + dy
+                                player.hitbox.bottom = player.hitbox.top + dy
                                 player.velocity.y = 0
                                 player.on_ground = True
                                 player.sync_rect()
