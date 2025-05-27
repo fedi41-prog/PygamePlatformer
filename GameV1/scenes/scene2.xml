@@ -46,6 +46,8 @@
         <StaticBlock sheet="tiles" texture="stoneLeft.png" x="2050" y="1300"/>
         <StaticBlock sheet="tiles" texture="stoneRight.png" x="2120" y="1300"/>
 
+        <Flag color="Red"  x="2120" y="1230"/>
+
 
     </Sprites>
 

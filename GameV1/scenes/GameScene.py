@@ -8,6 +8,7 @@ from GameV1.sprites.Entities.flag import Flag
 from GameV1.sprites.StaticBlocks.staticblock import StaticBlock
 from GameV1.sprites.UpdateBlocks.MovingBlock import MovingBlock
 from GameV1.sprites.player import Player
+from GameV1.sprites.Entities.particle import ParticleManager
 from GameV1.settings import VIRTUAL_WIDTH, VIRTUAL_HEIGHT
 
 class GameScene:
@@ -18,6 +19,7 @@ class GameScene:
         self.update_blocks = update_blocks
         self.entities = entities
         self.player = player
+        self.particle_manager = ParticleManager()
 
         # Hintergrundbild
         self.background_image = background_image
@@ -41,6 +43,7 @@ class GameScene:
         # Update beweglicher Blocks und Entities
         for obj in self.update_blocks + self.entities:
             obj.update(self.player)
+        self.particle_manager.update()
 
         # Spieler-Update mit allen Kollisionen
         self.player.update(self.static_blocks + self.update_blocks)
@@ -71,6 +74,8 @@ class GameScene:
             if obj.rect.colliderect(view_rect):
                 obj.draw(screen, self.camera)
 
+        self.particle_manager.draw(screen, self.camera)
+
         # Spieler zeichnen
         self.player.draw(screen, self.camera)
 
@@ -94,6 +99,7 @@ class GameScene:
         # Spieler
         pl = root.find('Player')
         player = Player(
+            game=game,
             x=int(pl.get('x', 0)),
             y=int(pl.get('y', 0)),
             texture_key=pl.get('textures'),
