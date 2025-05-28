@@ -1,5 +1,4 @@
 import pygame
-import xml.etree.ElementTree as ET
 
 from GameV1.core.camera import Camera
 from GameV1.hud.HUDManager import HUDManager
@@ -10,7 +9,7 @@ from GameV1.sprites.StaticBlocks.staticblock import StaticBlock
 from GameV1.sprites.UpdateBlocks.MovingBlock import MovingBlock
 from GameV1.sprites.player import Player
 from GameV1.sprites.Entities.particle import ParticleManager
-from GameV1.settings import VIRTUAL_WIDTH, VIRTUAL_HEIGHT
+from GameV1.settings import VIRTUAL_WIDTH, VIRTUAL_HEIGHT, ADMIN_PASSWORD
 
 class GameScene:
     def __init__(self, game, lvl_size, static_blocks, update_blocks, entities, player, background_image, parallax=0.3):
@@ -24,6 +23,7 @@ class GameScene:
         self.hud_manager = HUDManager(game)
 
         self.admin = False
+        self.password_index = 0
 
         # Hintergrundbild
         self.background_image = background_image
@@ -40,6 +40,13 @@ class GameScene:
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     self.game.running = False
+                elif event.key == ADMIN_PASSWORD[self.password_index]:
+                    self.password_index += 1
+                    if self.password_index == len(ADMIN_PASSWORD):
+                        self.admin = True
+                        self.password_index = 0
+                else:
+                    self.password_index = 0
 
     def update(self):
         self.entities = [e for e in self.entities if not getattr(e, 'to_remove', False)]

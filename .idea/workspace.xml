@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="differnt changes... like always">
-      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/hud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/hud.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/hud/HUDManager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/hud/coinDisplay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/hud/adminDisplay.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/assets/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/assets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/hud/HUDManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/hud/HUDManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/scenes/scene2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/scene2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/particle.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/particle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/sprites/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +38,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -212,7 +208,31 @@
       <option name="project" value="LOCAL" />
       <updated>1748373154963</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="differnt changes... like always">
+      <option name="closed" value="true" />
+      <created>1748440878315</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748440878315</updated>
+    </task>
+    <task id="LOCAL-00010" summary="differnt changes... like always">
+      <option name="closed" value="true" />
+      <created>1748440898923</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748440898923</updated>
+    </task>
+    <task id="LOCAL-00011" summary="differnt changes... like always">
+      <option name="closed" value="true" />
+      <created>1748440916455</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748440916455</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,5 +1,6 @@
 import pygame
 from GameV1.assets.assets import AssetManager
+from GameV1.hud.adminDisplay import AdminDisplay
 from GameV1.hud.coinDisplay import CoinDisplay
 
 
@@ -10,6 +11,8 @@ class HUDManager:
 
         self.coin_display = CoinDisplay(game)
         self.elements.append(self.coin_display)
+        self.admin_display = AdminDisplay(game)
+        self.elements.append(self.admin_display)
 
     def update(self):
         for element in self.elements:

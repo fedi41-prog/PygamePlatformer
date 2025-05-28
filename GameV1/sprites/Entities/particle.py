@@ -11,7 +11,7 @@ class Particle:
         self.lifetime = random.randint(10, 20)
         self.age = 0
         self.size = random.randint(2, 4)
-        self.color = (255, 255, 255)
+        self.color = (90, 90, 90)
 
     def update(self):
         self.velocity.y += self.gravity

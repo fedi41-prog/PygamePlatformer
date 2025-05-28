@@ -105,7 +105,7 @@ class Player:
 
     def trigger_slam_effect(self):
         print("BOOM!")  # Placeholder für Schockwellenlogik
-        self.game.scene.particle_manager.emit(self.hitbox.midbottom, 1000)
+        self.game.scene.particle_manager.emit(self.hitbox.midbottom, 50)
 
     def draw(self, screen, camera):
         self.update_image()
