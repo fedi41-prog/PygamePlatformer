@@ -5,11 +5,11 @@ from GameV1.settings import VIRTUAL_WIDTH
 
 
 class AdminDisplay:
-    def __init__(self, game, pos=(VIRTUAL_WIDTH-120, 35)):
+    def __init__(self, game, pos=(VIRTUAL_WIDTH-135, 35)):
         self.game = game
         self.position = pos
 
-        self.font = AssetManager.get_font("DebugFont")
+        self.font = AssetManager.get_font("HackedFont")
 
     def update(self):
         pass  # Falls etwas animiert oder dynamisch ist

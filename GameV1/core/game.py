@@ -30,7 +30,7 @@ class Game:
 
         # Asset-Manager vorbereiten
         AssetManager.load_all_sheets_from_folder("assets/images/spritesheets")
-        AssetManager.load_fonts_from_folder("assets/fonts", {"ArtPaperFont" : 30, "DebugFont" : 50})
+        AssetManager.load_fonts_from_folder("assets/fonts", {"ArtPaperFont" : 30, "HackedFont" : 50})
 
         # Spielsystem vorbereiten
         self.clock = pygame.time.Clock()

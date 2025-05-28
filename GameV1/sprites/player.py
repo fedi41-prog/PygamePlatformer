@@ -74,12 +74,11 @@ class Player:
         if any_true(keys, KEYMAP["home"]):
             self.hitbox.topleft = self.home_pos
 
-        if any_true(keys, KEYMAP["spectator_mode"]) and self.game.scene.admin:
-            self.spectator = True
-        elif any_true(keys, KEYMAP["normal_mode"]):
-            self.spectator = False
-
-
+        if self.game.scene.admin:
+            if any_true(keys, KEYMAP["spectator_mode"]):
+                self.spectator = True
+            elif any_true(keys, KEYMAP["normal_mode"]):
+                self.spectator = False
 
 
     def update(self, platforms):

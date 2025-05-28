@@ -9,12 +9,13 @@ TITLE = "Fedi4's platformer game 😎"
 KEYMAP = {
 
     "jump" : [pygame.K_SPACE, pygame.K_w],
-    "duck" : pygame.K_s,
+    "duck" : [pygame.K_s, pygame.K_LSHIFT],
     "left" : pygame.K_a,
     "right" : pygame.K_d,
     "home" : pygame.K_h,
     "spectator_mode" : pygame.K_c,
-    "normal_mode" : pygame.K_v
+    "normal_mode" : pygame.K_v,
+    "teleport" : pygame.K_t
 
 }
 
