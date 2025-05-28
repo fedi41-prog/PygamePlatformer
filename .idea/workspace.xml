@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="(:">
-      <change afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/particle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameV1/tools/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="differnt changes... like always">
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/hud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/hud.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/hud/HUDManager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/hud/coinDisplay.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/assets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/scenes/scene2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/scene2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/sprites/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747465516438</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="differnt changes... like always">
+      <option name="closed" value="true" />
+      <created>1748373154963</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748373154963</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +230,7 @@
     <MESSAGE value="camera movement, collision, walk animation" />
     <MESSAGE value="small changes - new platform types, also better camera movement" />
     <MESSAGE value="(:" />
-    <option name="LAST_COMMIT_MESSAGE" value="(:" />
+    <MESSAGE value="differnt changes... like always" />
+    <option name="LAST_COMMIT_MESSAGE" value="differnt changes... like always" />
   </component>
 </project>

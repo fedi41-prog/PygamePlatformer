@@ -2,6 +2,7 @@ import pygame
 import xml.etree.ElementTree as ET
 
 from GameV1.core.camera import Camera
+from GameV1.hud.HUDManager import HUDManager
 from GameV1.sprites.Entities.coin import Coin
 from GameV1.sprites.Entities.deco import Deco
 from GameV1.sprites.Entities.flag import Flag
@@ -20,6 +21,9 @@ class GameScene:
         self.entities = entities
         self.player = player
         self.particle_manager = ParticleManager()
+        self.hud_manager = HUDManager(game)
+
+        self.admin = False
 
         # Hintergrundbild
         self.background_image = background_image
@@ -47,6 +51,8 @@ class GameScene:
 
         # Spieler-Update mit allen Kollisionen
         self.player.update(self.static_blocks + self.update_blocks)
+
+        self.hud_manager.update()
 
         # Kamera folgt Spieler
         self.camera.update(self.player.hitbox)
@@ -78,6 +84,8 @@ class GameScene:
 
         # Spieler zeichnen
         self.player.draw(screen, self.camera)
+
+        self.hud_manager.draw(screen)
 
         pygame.display.flip()
 

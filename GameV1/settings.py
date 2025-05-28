@@ -12,6 +12,16 @@ KEYMAP = {
     "duck" : pygame.K_s,
     "left" : pygame.K_a,
     "right" : pygame.K_d,
-    "home" : pygame.K_h
+    "home" : pygame.K_h,
+    "spectator_mode" : pygame.K_c,
+    "normal_mode" : pygame.K_v
 
 }
+
+ADMIN_PASSWORD = [
+    pygame.K_a,
+    pygame.K_d,
+    pygame.K_m,
+    pygame.K_i,
+    pygame.K_n
+]

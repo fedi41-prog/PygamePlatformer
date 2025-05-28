@@ -13,6 +13,7 @@ class Player:
         self.jump_power = jump_power
         self.normal_jump_power = jump_power
         self.speed = 4
+        self.spectator_speed = 8
         self.texture_key = texture_key
         self.spectator = False
 
@@ -40,7 +41,17 @@ class Player:
         keys = pygame.key.get_pressed()
 
         if self.spectator:
-            pass
+            if any_true(keys, KEYMAP["jump"]):
+                self.hitbox.y -= self.spectator_speed
+            if any_true(keys, KEYMAP["left"]):
+                self.hitbox.x -= self.spectator_speed
+                self.direction = "left"
+            if any_true(keys, KEYMAP["right"]):
+                self.hitbox.x += self.spectator_speed
+                self.direction = "right"
+            if any_true(keys, KEYMAP["duck"]):
+                self.hitbox.y += self.spectator_speed
+
         else:
             if self.slam_cooldown == 0:
                 if any_true(keys, KEYMAP["jump"]) and self.on_ground:
@@ -56,12 +67,20 @@ class Player:
             else:
                 self.velocity.x = 0
 
-            if any_true(keys, KEYMAP["duck"]) and not self.on_ground and self.slam_cooldown <= 0:
+            if any_true(keys, KEYMAP["duck"]) and not self.on_ground and self.slam_cooldown == 0:
                 self.slam_active = True
                 self.velocity.y = self.slam_speed
 
         if any_true(keys, KEYMAP["home"]):
             self.hitbox.topleft = self.home_pos
+
+        if any_true(keys, KEYMAP["spectator_mode"]) and self.game.scene.admin:
+            self.spectator = True
+        elif any_true(keys, KEYMAP["normal_mode"]):
+            self.spectator = False
+
+
+
 
     def update(self, platforms):
         self.handle_input()

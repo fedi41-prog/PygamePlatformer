@@ -26,6 +26,18 @@
         <StaticBlock sheet="tiles" texture="castleHalfRight.png" x="760" y="300"/>
         <StaticBlock sheet="tiles" texture="castleHalfMid.png" x="690" y="300"/>
         <StaticBlock sheet="tiles" texture="castleHalfLeft.png" x="620" y="300"/>
+        <Coin sheet="items" texture="coinGold.png" x="620" y="230"/>
+        <Coin sheet="items" texture="coinGold.png" x="620" y="160"/>
+        <Coin sheet="items" texture="coinGold.png" x="690" y="230"/>
+        <Coin sheet="items" texture="coinGold.png" x="690" y="160"/>
+        <Coin sheet="items" texture="coinGold.png" x="760" y="230"/>
+        <Coin sheet="items" texture="coinGold.png" x="760" y="160"/>
+        <Coin sheet="items" texture="coinGold.png" x="620" y="90"/>
+        <Coin sheet="items" texture="coinGold.png" x="620" y="20"/>
+        <Coin sheet="items" texture="coinGold.png" x="690" y="90"/>
+        <Coin sheet="items" texture="coinGold.png" x="690" y="20"/>
+        <Coin sheet="items" texture="coinGold.png" x="760" y="90"/>
+        <Coin sheet="items" texture="coinGold.png" x="760" y="20"/>
 
         <StaticBlock sheet="tiles" texture="castleHalfRight.png" x="410" y="230"/>
         <StaticBlock sheet="tiles" texture="castleHalfLeft.png" x="340" y="230"/>
