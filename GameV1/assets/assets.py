@@ -5,6 +5,7 @@ import os
 
 class AssetManager:
     _sheets = {}     # z.B. {"player": {name: Surface, ...}, "items": {...}}
+    _fonts = {}      # z.B. {"default": FontObject, "title": FontObject, ...}
 
     @classmethod
     def load_sheet(cls, key, image_path, xml_path):
@@ -35,3 +36,23 @@ class AssetManager:
                 xml_path = os.path.join(folder_path, base + ".xml")
                 if os.path.exists(xml_path):
                     cls.load_sheet(base, image_path, xml_path)
+
+    # ---------------------- FONT MANAGEMENT ----------------------
+    @classmethod
+    def load_font(cls, name, path, size):
+        if name not in cls._fonts:
+            cls._fonts[name] = pygame.font.Font(path, size)
+        return cls._fonts[name]
+
+    @classmethod
+    def get_font(cls, name):
+        return cls._fonts.get(name)
+
+    @classmethod
+    def load_fonts_from_folder(cls, folder_path, default_sizes):
+        for filename in os.listdir(folder_path):
+            if filename.endswith(".ttf") or filename.endswith(".otf"):
+                base = os.path.splitext(filename)[0]
+                path = os.path.join(folder_path, filename)
+                size = default_sizes.get(base, 24)  # Standardgröße: 24
+                cls.load_font(base, path, size)
