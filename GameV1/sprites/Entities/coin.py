@@ -2,7 +2,8 @@ import pygame
 from GameV1.assets.assets import AssetManager
 
 class Coin:
-    def __init__(self, x, y, sheet, texture):
+    def __init__(self, x, y, sheet, texture, game):
+        self.game = game
         self.image = AssetManager.get(sheet, texture)
         self.mask = pygame.mask.from_surface(self.image)
 
@@ -14,7 +15,8 @@ class Coin:
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
 
-    def update(self, player):
+    def update(self):
+        player = self.game.scene.player
         if self.step % 2:
             self.rect.y += self.dir
         self.step += 1
