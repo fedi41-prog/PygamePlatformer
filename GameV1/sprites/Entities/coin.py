@@ -1,7 +1,6 @@
 import pygame
 from GameV1.assets.assets import AssetManager
 
-
 class Coin:
     def __init__(self, x, y, sheet, texture):
         self.image = AssetManager.get(sheet, texture)
@@ -32,6 +31,7 @@ class Coin:
         # overlap gibt None oder den ersten überlappenden Pixel zurück
         if player.mask.overlap(self.mask, offset):
             self.to_remove = True
+            player.game.scene.hud_manager.coin_display.increase_amount(1)
 
 
     def draw(self, screen, camera):
