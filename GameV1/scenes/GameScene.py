@@ -53,7 +53,7 @@ class GameScene:
 
         # Update beweglicher Blocks und Entities
         for obj in self.update_blocks + self.entities:
-            obj.update(self.player)
+            obj.update()
         self.particle_manager.update()
 
         # Spieler-Update mit allen Kollisionen
@@ -142,24 +142,28 @@ class GameScene:
                 yd=int(e.get('yd', 0)),
                 sheet=e.get('sheet'),
                 texture=e.get('texture'),
-                speed=int(e.get('speed', 2))
+                speed=int(e.get('speed', 2)),
+                game=game
             ),
             'Flag': lambda e: Flag(
                 x=int(e.get('x', 0)),
                 y=int(e.get('y', 0)),
-                color=e.get('color')
+                color=e.get('color'),
+                game=game
             ),
             'Coin': lambda e: Coin(
                 x=int(e.get('x', 0)),
                 y=int(e.get('y', 0)),
                 sheet=e.get('sheet'),
-                texture=e.get('texture')
+                texture=e.get('texture'),
+                game=game
             ),
             'Deco': lambda e: Deco(
                 x=int(e.get('x', 0)),
                 y=int(e.get('y', 0)),
                 sheet=e.get('sheet'),
-                texture=e.get('texture')
+                texture=e.get('texture'),
+                game=game
             ),
         }
 
