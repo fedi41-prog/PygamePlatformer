@@ -2,9 +2,11 @@ import pygame
 from GameV1.assets.assets import AssetManager
 
 class MovingBlock:
-    def __init__(self, x, y, xd, yd, sheet, texture, speed=2):
+    def __init__(self, game, x, y, xd, yd, sheet, texture, speed=2):
         self.image = AssetManager.get(sheet, texture)
         self.mask  = pygame.mask.from_surface(self.image)
+
+        self.game = game
 
         # Start- und Endposition als Vektoren
         self.pos1 = pygame.Vector2(x, y)
@@ -20,7 +22,9 @@ class MovingBlock:
         self._pos = self.pos1.copy()
         self.rect = self.image.get_rect(topleft=(x, y))
 
-    def update(self, player=None):
+    def update(self):
+        player = self.game.scene.player
+
         # 1) Block-Update wie gehabt (Lerp mit Float)
         old_rect = self.rect.copy()
 

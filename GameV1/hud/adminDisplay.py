@@ -1,11 +1,11 @@
 import pygame
 
 from GameV1.assets.assets import AssetManager
-from GameV1.settings import VIRTUAL_WIDTH
+from GameV1.settings import VIRTUAL_WIDTH, VIRTUAL_HEIGHT
 
 
 class AdminDisplay:
-    def __init__(self, game, pos=(VIRTUAL_WIDTH-135, 35)):
+    def __init__(self, game, pos=(5, VIRTUAL_HEIGHT-24)):
         self.game = game
         self.position = pos
 

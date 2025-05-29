@@ -2,7 +2,8 @@ import pygame
 from GameV1.assets.assets import AssetManager
 
 class Flag:
-    def __init__(self, x, y, color):
+    def __init__(self, x, y, color, game):
+        self.game = game
         self.color = color
         # Initiale hängende Grafik laden
         self.image = AssetManager.get("items", f"flag{color}Hanging.png")
@@ -15,7 +16,9 @@ class Flag:
         self.img_nr = 0
         self.step = 0
 
-    def update(self, player):
+    def update(self):
+        player = self.game.scene.player
+
         # Pixelgenaue Kollision: Offset von Spieler- zu Flag-Maske
         offset = (self.rect.x - player.rect.x, self.rect.y - player.rect.y)
         # overlap gibt None oder den ersten überlappenden Pixel zurück

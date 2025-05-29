@@ -16,6 +16,7 @@ class Player:
         self.spectator_speed = 8
         self.texture_key = texture_key
         self.spectator = False
+        self.hearts = 3
 
         self.walkAnimation = [f"_walk{str(i).zfill(2)}.png" for i in range(1, 12)]
         self.walkStep = 0
@@ -98,6 +99,7 @@ class Player:
 
         if self.hitbox.y > self.game.scene.level_height:
             self.hitbox.topleft = self.home_pos
+            self.get_damage(0.5)
 
 
         self.sync_rect()
@@ -159,4 +161,10 @@ class Player:
 
     def sync_rect(self):
         self.rect.midbottom = self.hitbox.midbottom
+
+    def get_damage(self, amount):
+        self.hearts -= amount
+        print(self.hearts)
+        if self.hearts <= 0:
+            self.game.running = False
 
