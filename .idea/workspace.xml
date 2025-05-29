@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="differnt changes... like always:  &#10;new particle color, admin features, spectator mode, a bit changed map">
-      <change afterPath="$PROJECT_DIR$/GameV1/hud/HeartsDisplay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/fonts/ArtPaperFont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/fonts/HackedFont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/fonts/HudFont.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/hud/HUDManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/hud/HUDManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/hud/adminDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/hud/adminDisplay.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/hud/coinDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/hud/coinDisplay.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/deco.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/deco.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/flag.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/flag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameV1/sprites/UpdateBlocks/MovingBlock.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/UpdateBlocks/MovingBlock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameV1/sprites/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,15 +242,7 @@
       <option name="project" value="LOCAL" />
       <updated>1748448965133</updated>
     </task>
-    <task id="LOCAL-00013" summary="differnt changes... like always:  &#10;new particle color, admin features, spectator mode, a bit changed map">
-      <option name="closed" value="true" />
-      <created>1748453020880</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1748453020880</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -14,8 +14,7 @@ KEYMAP = {
     "right" : pygame.K_d,
     "home" : pygame.K_h,
     "spectator_mode" : pygame.K_c,
-    "normal_mode" : pygame.K_v,
-    "teleport" : pygame.K_t
+    "normal_mode" : pygame.K_v
 
 }
 
