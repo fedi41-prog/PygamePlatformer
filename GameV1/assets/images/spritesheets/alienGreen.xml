@@ -1,13 +1,33 @@
-<TextureAtlas imagePath="sheet.png">
-	<SubTexture name="alienGreen.png" x="70" y="92" width="66" height="92"/>
-	<SubTexture name="alienGreen_climb1.png" x="70" y="0" width="66" height="92"/>
-	<SubTexture name="alienGreen_climb2.png" x="135" y="379" width="66" height="92"/>
-	<SubTexture name="alienGreen_duck.png" x="0" y="380" width="69" height="71"/>
-	<SubTexture name="alienGreen_hurt.png" x="0" y="288" width="69" height="92"/>
-	<SubTexture name="alienGreen_jump.png" x="69" y="286" width="67" height="93"/>
-	<SubTexture name="alienGreen_stand.png" x="69" y="379" width="66" height="92"/>
-	<SubTexture name="alienGreen_swim1.png" x="0" y="193" width="69" height="95"/>
-	<SubTexture name="alienGreen_swim2.png" x="0" y="96" width="70" height="97"/>
-	<SubTexture name="alienGreen_walk1.png" x="69" y="193" width="68" height="93"/>
-	<SubTexture name="alienGreen_walk2.png" x="0" y="0" width="70" height="96"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:d0e79708bc5104e1ca068f0b2bec92c1:c6e37232154c983b0ea2788f6192e4da:4230284fe057450fa398674c24da3371$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="alienGreen.png" width="344" height="189">
+    <sprite n="alienGreen_climb1.png" x="69" y="0" w="66" h="92"/>
+    <sprite n="alienGreen_climb2.png" x="135" y="0" w="66" h="92"/>
+    <sprite n="alienGreen_duck.png" x="0" y="0" w="69" h="71"/>
+    <sprite n="alienGreen_hurt.png" x="201" y="0" w="69" h="92"/>
+    <sprite n="alienGreen_jump.png" x="0" y="92" w="67" h="93"/>
+    <sprite n="alienGreen_stand.png" x="270" y="0" w="66" h="92"/>
+    <sprite n="alienGreen_swim1.png" x="135" y="92" w="69" h="95"/>
+    <sprite n="alienGreen_swim2.png" x="274" y="92" w="70" h="97"/>
+    <sprite n="alienGreen_walk1.png" x="67" y="92" w="68" h="93"/>
+    <sprite n="alienGreen_walk2.png" x="204" y="92" w="70" h="96"/>
 </TextureAtlas>

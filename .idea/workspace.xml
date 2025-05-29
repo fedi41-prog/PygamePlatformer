@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="differnt changes... like always:  &#10;new particle color, admin features, spectator mode, a bit changed map" />
+    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="differnt changes... like always:  &#10;new particle color, admin features, spectator mode, a bit changed map">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienBeige.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienBeige.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienBlue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienBlue.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreenWalk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienGreenWalk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienPink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienPink.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienYellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/alienYellow.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/enemies.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/enemies.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/enemies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/enemies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/hud.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/hud.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/hud.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/hud.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/items.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/items.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/images/spritesheets/items.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/tools/spritesheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/tools/spritesheet.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +79,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Python.__init__.executor": "Run",
     "Python.game.executor": "Run",
     "Python.main.executor": "Run",
@@ -65,8 +87,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "new-textures",
-    "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/fonts"
+    "git-widget-placeholder": "better-texture-loading",
+    "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/images/spritesheets"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -76,9 +98,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\spritesheets" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\fonts" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\font" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\spritesheets" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\sprites\Entities" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\scenes" />
     </key>

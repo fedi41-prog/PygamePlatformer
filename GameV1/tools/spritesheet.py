@@ -33,12 +33,12 @@ class SpriteSheet:
         root = tree.getroot()
         sprites = {}
 
-        for subtexture in root.findall("SubTexture"):
-            name = subtexture.get("name")
+        for subtexture in root.findall("sprite"):
+            name = subtexture.get("n")
             x = int(subtexture.get("x"))
             y = int(subtexture.get("y"))
-            width = int(subtexture.get("width"))
-            height = int(subtexture.get("height"))
+            width = int(subtexture.get("w"))
+            height = int(subtexture.get("h"))
 
             sprites[name] = self.image_at((x, y, width, height))
 
