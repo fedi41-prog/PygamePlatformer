@@ -18,7 +18,10 @@ class Player:
         self.spectator = False
         self.hearts = 3
 
-        self.walkAnimation = [f"_walk{str(i).zfill(2)}.png" for i in range(1, 12)]
+        self.walkAnimation = [
+            "_walk1.png",
+            "_walk2.png"
+        ]
         self.walkStep = 0
         self.image = AssetManager.get(self.texture_key, self.texture_key + "_stand.png")
 
@@ -117,9 +120,9 @@ class Player:
         if not self.on_ground:
             self.image = AssetManager.get(self.texture_key, self.texture_key + "_jump.png")
         elif self.velocity.x != 0:
-            self.image = AssetManager.get(self.texture_key + "Walk",
+            self.image = AssetManager.get(self.texture_key,
                                           self.texture_key + self.walkAnimation[int(self.walkStep)])
-            self.walkStep += 0.35
+            self.walkStep += 0.125
             if self.walkStep >= len(self.walkAnimation):
                 self.walkStep = 0
         else:
