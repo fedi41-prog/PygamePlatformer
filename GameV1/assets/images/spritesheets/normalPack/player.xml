@@ -20,14 +20,14 @@ verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
 triangles  => sprite triangulation, 3 vertex indices per triangle
 -->
 <TextureAtlas imagePath="alienGreen.png" width="344" height="189">
-    <sprite n="alienGreen_climb1.png" x="69" y="0" w="66" h="92"/>
-    <sprite n="alienGreen_climb2.png" x="135" y="0" w="66" h="92"/>
-    <sprite n="alienGreen_duck.png" x="0" y="0" w="69" h="71"/>
-    <sprite n="alienGreen_hurt.png" x="201" y="0" w="69" h="92"/>
-    <sprite n="alienGreen_jump.png" x="0" y="92" w="67" h="93"/>
-    <sprite n="alienGreen_stand.png" x="270" y="0" w="66" h="92"/>
-    <sprite n="alienGreen_swim1.png" x="135" y="92" w="69" h="95"/>
-    <sprite n="alienGreen_swim2.png" x="274" y="92" w="70" h="97"/>
-    <sprite n="alienGreen_walk1.png" x="67" y="92" w="68" h="93"/>
-    <sprite n="alienGreen_walk2.png" x="204" y="92" w="70" h="96"/>
+    <sprite n="player_climb1.png" x="69" y="0" w="66" h="92"/>
+    <sprite n="player_climb2.png" x="135" y="0" w="66" h="92"/>
+    <sprite n="player_duck.png" x="0" y="0" w="69" h="71"/>
+    <sprite n="player_hurt.png" x="201" y="0" w="69" h="92"/>
+    <sprite n="player_jump.png" x="0" y="92" w="67" h="93"/>
+    <sprite n="player_stand.png" x="270" y="0" w="66" h="92"/>
+    <sprite n="player_swim1.png" x="135" y="92" w="69" h="95"/>
+    <sprite n="player_swim2.png" x="274" y="92" w="70" h="97"/>
+    <sprite n="player_walk1.png" x="67" y="92" w="68" h="93"/>
+    <sprite n="player_walk2.png" x="204" y="92" w="70" h="96"/>
 </TextureAtlas>
