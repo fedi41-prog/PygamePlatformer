@@ -18,9 +18,9 @@ class Player:
         self.spectator = False
         self.hearts = 3
 
-        self.walkAnimation = [f"_walk{str(i).zfill(2)}.png" for i in range(1, 12)]
+        self.walkAnimation = ["_walk1", "_walk2"]
         self.walkStep = 0
-        self.image = AssetManager.get(self.texture_key, self.texture_key + "_stand.png")
+        self.image = AssetManager.get("player/" + self.texture_key + "_stand")
 
         self.rect = self.image.get_rect(topleft=(x, y))
         self.home_pos = (x, y)
@@ -115,19 +115,18 @@ class Player:
 
     def update_image(self):
         if not self.on_ground:
-            self.image = AssetManager.get(self.texture_key, self.texture_key + "_jump.png")
+            self.image = AssetManager.get("player/" + self.texture_key + "_jump")
         elif self.velocity.x != 0:
-            self.image = AssetManager.get(self.texture_key + "Walk",
-                                          self.texture_key + self.walkAnimation[int(self.walkStep)])
-            self.walkStep += 0.35
+            self.image = AssetManager.get("player/" + self.texture_key + self.walkAnimation[int(self.walkStep)])
+            self.walkStep += 0.125
             if self.walkStep >= len(self.walkAnimation):
                 self.walkStep = 0
         else:
             if self.slam_cooldown <= 0:
-                self.image = AssetManager.get(self.texture_key, self.texture_key + "_stand.png")
+                self.image = AssetManager.get("player/" + self.texture_key + "_stand")
             else:
                 # Hole das Duck-Bild
-                duck_image = AssetManager.get(self.texture_key, self.texture_key + "_duck.png")
+                duck_image = AssetManager.get("player/" + self.texture_key + "_duck")
 
                 # Erstelle Surface mit voller Spielergröße und zentriere duck_image unten
                 full_size_image = pygame.Surface(self.image.get_size(), pygame.SRCALPHA)

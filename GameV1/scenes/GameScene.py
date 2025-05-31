@@ -1,5 +1,6 @@
 import pygame
 
+from GameV1.assets.assets import AssetManager
 from GameV1.core.camera import Camera
 from GameV1.hud.HUDManager import HUDManager
 from GameV1.sprites.Entities.coin import Coin
@@ -108,7 +109,7 @@ class GameScene:
 
         # Hintergrund
         bg_elem = root.find('Background')
-        bg_img = pygame.image.load(bg_elem.get('path')).convert()
+        bg_img = AssetManager.get(bg_elem.get('texture'))
         parallax = float(bg_elem.get('parallax', 0.5))
 
         # Spieler
@@ -132,7 +133,6 @@ class GameScene:
             'StaticBlock': lambda e: StaticBlock(
                 x=int(e.get('x', 0)),
                 y=int(e.get('y', 0)),
-                sheet=e.get('sheet'),
                 texture=e.get('texture')
             ),
             'MovingBlock': lambda e: MovingBlock(
@@ -140,7 +140,6 @@ class GameScene:
                 y=int(e.get('y', 0)),
                 xd=int(e.get('xd', 0)),
                 yd=int(e.get('yd', 0)),
-                sheet=e.get('sheet'),
                 texture=e.get('texture'),
                 speed=int(e.get('speed', 2)),
                 game=game
@@ -154,14 +153,12 @@ class GameScene:
             'Coin': lambda e: Coin(
                 x=int(e.get('x', 0)),
                 y=int(e.get('y', 0)),
-                sheet=e.get('sheet'),
                 texture=e.get('texture'),
                 game=game
             ),
             'Deco': lambda e: Deco(
                 x=int(e.get('x', 0)),
                 y=int(e.get('y', 0)),
-                sheet=e.get('sheet'),
                 texture=e.get('texture'),
                 game=game
             ),

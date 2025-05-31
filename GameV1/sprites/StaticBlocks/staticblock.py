@@ -3,8 +3,8 @@ from GameV1.assets.assets import AssetManager
 
 
 class StaticBlock:
-    def __init__(self, x, y, sheet, texture):
-        self.image = AssetManager.get(sheet, texture)
+    def __init__(self, x, y, texture):
+        self.image = AssetManager.get(texture)
         self.mask = pygame.mask.from_surface(self.image)
 
         self.rect = self.image.get_rect()

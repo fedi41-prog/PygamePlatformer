@@ -9,8 +9,8 @@ class CoinDisplay:
         self.position = pos
         self.amount = 0
 
-        self.icon = pygame.transform.scale(AssetManager.get("hud", "hud_coins.png"), (32, 32))
-        self.font = AssetManager.get_font("HudFont")
+        self.icon = pygame.transform.scale(AssetManager.get("hud/hud_coins"), (32, 32))
+        self.font = AssetManager.get_font("fonts/HudFont", 30)
 
     def set_amount(self, amount):
         self.amount = amount

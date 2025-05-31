@@ -2,9 +2,9 @@ import pygame
 from GameV1.assets.assets import AssetManager
 
 class Coin:
-    def __init__(self, x, y, sheet, texture, game):
+    def __init__(self, x, y, texture, game):
         self.game = game
-        self.image = AssetManager.get(sheet, texture)
+        self.image = AssetManager.get(texture)
         self.mask = pygame.mask.from_surface(self.image)
 
         self.dir = 1
