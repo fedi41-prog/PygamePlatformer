@@ -118,7 +118,7 @@ class Player:
             self.image = AssetManager.get("player/" + self.texture_key + "_jump")
         elif self.velocity.x != 0:
             self.image = AssetManager.get("player/" + self.texture_key + self.walkAnimation[int(self.walkStep)])
-            self.walkStep += 0.14
+            self.walkStep += 0.125
             if self.walkStep >= len(self.walkAnimation):
                 self.walkStep = 0
         else:

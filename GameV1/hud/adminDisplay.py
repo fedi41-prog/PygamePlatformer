@@ -9,14 +9,14 @@ class AdminDisplay:
         self.game = game
         self.position = pos
 
-        self.font = AssetManager.get_font("fonts/HackedFont")
+        self.font = AssetManager.get_font("fonts/HackedFont", 50)
 
     def update(self):
         pass  # Falls etwas animiert oder dynamisch ist
 
     def draw(self, surface):
         if self.game.scene.admin:
-            text = self.font.render("ADMIN", True, (90, 160, 90))
+            text = self.font.render("ADMIN", True, (90, 90, 90))
             text_rect = text.get_rect()
             text_rect.left = self.position[0]
             text_rect.centery = self.position[1]
