@@ -11,9 +11,9 @@ class HeartsDisplay:
 
         self.hearts = 0
 
-        self.image_full = AssetManager.get("hud", "hud_heartFull.png")
-        self.image_half = AssetManager.get("hud", "hud_heartHalf.png")
-        self.image_empty = AssetManager.get("hud", "hud_heartEmpty.png")
+        self.image_full = AssetManager.get("hud/hud_heartFull")
+        self.image_half = AssetManager.get("hud/hud_heartHalf")
+        self.image_empty = AssetManager.get("hud/hud_heartEmpty")
 
 
     def update(self):

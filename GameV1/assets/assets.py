@@ -1,58 +1,59 @@
-import pygame
-import xml.etree.ElementTree as ET
-from GameV1.tools.spritesheet import SpriteSheet
 import os
+import pygame
 
 class AssetManager:
-    _sheets = {}     # z.B. {"player": {name: Surface, ...}, "items": {...}}
-    _fonts = {}      # z.B. {"default": FontObject, "title": FontObject, ...}
+    _texture_packs = []  # Liste von dicts: [{"imgname": Surface}, {...}]
+    _fonts = {}          # z.B. {"pack1/fontname": {size: Font, ...}}
 
     @classmethod
-    def load_sheet(cls, key, image_path, xml_path):
-        if key in cls._sheets:
-            return cls._sheets[key]  # Schon geladen
+    def add_texture_pack(cls, folder_path, default_font_sizes=None):
+        """
+        Fügt ein neues Texture-Pack hinzu. Lädt alle PNGs und Fonts im Ordner sofort.
+        `default_font_sizes` ist ein dict: {"rel/path/fontname": [12, 24, 32]}
+        """
+        texture_pack = {}
+        font_pack = {}
 
-        ss = SpriteSheet(image_path)
-        sprite_dict = ss.load_from_xml(xml_path)
+        if default_font_sizes is None:
+            default_font_sizes = {}
 
-        cls._sheets[key] = sprite_dict
-        return sprite_dict
+        for root, _, files in os.walk(folder_path):
+            for filename in files:
+                full_path = os.path.join(root, filename)
+                rel_path = os.path.relpath(full_path, folder_path).replace("\\", "/")
+                key = os.path.splitext(rel_path)[0]  # ohne Endung
 
-    @classmethod
-    def get(cls, sheet_key, sprite_name):
-        sheet = cls._sheets.get(sheet_key, {})
-        return sheet.get(sprite_name)
+                if filename.endswith(".png"):
+                    texture_pack[key] = pygame.image.load(full_path).convert_alpha()
 
-    @classmethod
-    def getSheet(cls, sheet_key):
-        return cls._sheets.get(sheet_key, {})
+                elif filename.endswith(".ttf") or filename.endswith(".otf"):
+                    sizes = default_font_sizes.get(key, [24])
+                    font_pack[key] = {}
+                    for size in sizes:
+                        font_pack[key][size] = pygame.font.Font(full_path, size)
 
-    @classmethod
-    def load_all_sheets_from_folder(cls, folder_path):
-        for filename in os.listdir(folder_path):
-            if filename.endswith(".png"):
-                base = os.path.splitext(filename)[0]
-                image_path = os.path.join(folder_path, base + ".png")
-                xml_path = os.path.join(folder_path, base + ".xml")
-                if os.path.exists(xml_path):
-                    cls.load_sheet(base, image_path, xml_path)
-
-    # ---------------------- FONT MANAGEMENT ----------------------
-    @classmethod
-    def load_font(cls, name, path, size):
-        if name not in cls._fonts:
-            cls._fonts[name] = pygame.font.Font(path, size)
-        return cls._fonts[name]
+        cls._texture_packs.append(texture_pack)
+        cls._fonts.update(font_pack)
 
     @classmethod
-    def get_font(cls, name):
-        return cls._fonts.get(name)
+    def get(cls, image_name):
+        """Sucht ein Bild in allen Texture-Packs in Reihenfolge."""
+        for pack in cls._texture_packs:
+            if image_name in pack:
+                return pack[image_name]
+        # Bild nicht gefunden
+        raise FileNotFoundError(f"Image '{image_name}' not found in any texture pack.")
 
     @classmethod
-    def load_fonts_from_folder(cls, folder_path, default_sizes):
-        for filename in os.listdir(folder_path):
-            if filename.endswith(".ttf") or filename.endswith(".otf"):
-                base = os.path.splitext(filename)[0]
-                path = os.path.join(folder_path, filename)
-                size = default_sizes.get(base, 24)  # Standardgröße: 24
-                cls.load_font(base, path, size)
+    def get_font(cls, font_name, size=24):
+        """Gibt eine Font in gegebener Größe zurück, wenn vorhanden."""
+        fonts = cls._fonts.get(font_name)
+        if fonts:
+            return fonts.get(size)
+        # Bild nicht gefunden
+        raise FileNotFoundError(f"Image '{font_name}' not found in any texture pack.")
+
+    @classmethod
+    def clear(cls):
+        cls._texture_packs.clear()
+        cls._fonts.clear()
