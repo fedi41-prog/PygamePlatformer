@@ -17,7 +17,7 @@ class Game:
         print(self.SCREEN_WIDTH, self.SCREEN_HEIGHT)
 
         # Vollbild-Fenster
-        self.screen = pygame.display.set_mode((self.SCREEN_WIDTH, self.SCREEN_HEIGHT), pygame.FULLSCREEN, pygame.SCALED)
+        self.screen = pygame.display.set_mode((self.SCREEN_WIDTH, self.SCREEN_HEIGHT), pygame.SCALED)
         pygame.display.set_caption(TITLE)
 
         # Skalierungsfaktor berechnen, um das virtuelle Bild anzupassen
