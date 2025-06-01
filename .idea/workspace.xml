@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="created a texture-pack system with layers and removed spritesheets" />
+    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="add gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +44,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/fedi41-prog/PygamePlatformer&quot;,
+    &quot;url&quot;: &quot;https://github.com/fedi41-prog/PygamePlatformer.git&quot;,
     &quot;accountId&quot;: &quot;494dba3a-5552-4bc4-b945-890dfdf1288e&quot;
   }
 }</component>
@@ -67,7 +71,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "fix-screen-bugs2",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/default"
   },
   "keyToStringList": {
@@ -242,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748696042036</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add gitignore">
+      <option name="closed" value="true" />
+      <created>1748771980799</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748771980799</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +275,7 @@
     <MESSAGE value="differnt changes... like always" />
     <MESSAGE value="differnt changes... like always:  &#10;new particle color, admin features, spectator mode, a bit changed map" />
     <MESSAGE value="created a texture-pack system with layers and removed spritesheets" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a texture-pack system with layers and removed spritesheets" />
+    <MESSAGE value="add gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
   </component>
 </project>
