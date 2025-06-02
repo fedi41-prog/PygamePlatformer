@@ -25,3 +25,5 @@ ADMIN_PASSWORD = [
     pygame.K_i,
     pygame.K_n
 ]
+
+RESOURCE_PACKS = []

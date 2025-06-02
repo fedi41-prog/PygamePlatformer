@@ -1,18 +1,21 @@
 import os
 import pygame
+import json
 
 class AssetManager:
-    _texture_packs = []  # Liste von dicts: {"imgname": Surface, "fonts/fontname_size": Font, ...}
+    _resource_packs = []  # Liste von dicts: {"imgname": Surface, "fonts/fontname_size": Font, ...}
     _fonts = {}  # Optional: flache Font-Tabelle, z. B. fuer direkte Abfrage
 
     @classmethod
-    def add_texture_pack(cls, folder_path, font_sizes=None):
+    def add_resource_pack(cls, folder_path):
         """
         Fügt ein neues Texture-Pack hinzu. Lädt alle PNG-Bilder und Fonts (.ttf/.otf) aus dem Ordner.
         Optional: font_sizes = {"Fontname": [16, 24, 32], ...}
         """
         texture_pack = {}
-        font_sizes = font_sizes or {}
+
+        with open(folder_path + "/settings.json", "r") as f:
+            font_sizes = json.load(f)["font-sizes"]
 
         for root, _, files in os.walk(folder_path):
             for filename in files:
@@ -32,12 +35,12 @@ class AssetManager:
                         texture_pack[key] = font
                         cls._fonts[key] = font  # Optional in zentrale Map
 
-        cls._texture_packs.append(texture_pack)
+        cls._resource_packs.append(texture_pack)
 
     @classmethod
     def get(cls, asset_name):
         """Sucht Bild oder Font in allen Texture-Packs."""
-        for pack in cls._texture_packs:
+        for pack in cls._resource_packs:
             if asset_name in pack:
                 return pack[asset_name]
         raise FileNotFoundError(f"Asset '{asset_name}' not found in any texture pack.")
@@ -50,5 +53,5 @@ class AssetManager:
 
     @classmethod
     def clear(cls):
-        cls._texture_packs.clear()
+        cls._resource_packs.clear()
         cls._fonts.clear()
