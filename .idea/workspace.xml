@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="add gitignore">
+    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="just testing new resource pack">
       <change beforePath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/assets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/tools/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/tools/tools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,26 +64,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Morse Code.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.game.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.run_game.executor": "Run",
-    "Python.уравнение.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Morse Code.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.setup.executor&quot;: &quot;Run&quot;,
+    &quot;Python.уравнение.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;trying-exe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/default&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\default" />
@@ -89,14 +94,14 @@
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\spritesheets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\default" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\base_pack" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\sprites\StaticBlocks" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\sprites" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.__init__">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Pygame-platformer" />
       <option name="ENV_FILES" value="" />
@@ -119,9 +124,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Pygame-platformer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/buildd/GameV1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buildd/GameV1/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.__init__" />
       </list>
     </recent_temporary>

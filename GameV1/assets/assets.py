@@ -1,5 +1,7 @@
 import os
 import pygame
+from GameV1.tools.tools import resource_path
+
 
 class AssetManager:
     _texture_packs = []  # Liste von dicts: [{"imgname": Surface}, {...}]
@@ -11,6 +13,7 @@ class AssetManager:
         Fügt ein neues Texture-Pack hinzu. Lädt alle PNGs und Fonts im Ordner sofort.
         `default_font_sizes` ist ein dict: {"rel/path/fontname": [12, 24, 32]}
         """
+
         texture_pack = {}
         font_pack = {}
 

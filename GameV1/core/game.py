@@ -2,6 +2,7 @@ import pygame
 from GameV1.scenes.GameScene import GameScene
 from GameV1.settings import *
 from GameV1.assets.assets import AssetManager
+from GameV1.tools.tools import resource_path
 
 class Game:
     def __init__(self):
@@ -34,7 +35,7 @@ class Game:
         # Spielsystem vorbereiten
         self.clock = pygame.time.Clock()
         self.running = True
-        self.scene = GameScene.generate_scene_from_xml(self, "scenes/scene2.xml")
+        self.scene = GameScene.generate_scene_from_xml(self, resource_path("GameV1/scenes/scene2.xml"))
 
     def run(self):
         while self.running:
