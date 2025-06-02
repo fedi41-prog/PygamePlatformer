@@ -9,7 +9,7 @@ class AdminDisplay:
         self.game = game
         self.position = pos
 
-        self.font = AssetManager.get_font("fonts/HackedFont", 50)
+        self.font = AssetManager.get_font("HackedFont", 50)
 
     def update(self):
         pass  # Falls etwas animiert oder dynamisch ist
