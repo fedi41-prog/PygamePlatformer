@@ -29,7 +29,10 @@ class Game:
         self.virtual_screen = pygame.Surface((VIRTUAL_WIDTH, VIRTUAL_HEIGHT))
 
         # Asset-Manager vorbereiten
-        AssetManager.add_texture_pack("assets/default", {"fonts/HudFont" : [30], "fonts/HackedFont" : [50]})
+        for r in RESOURCE_PACKS:
+            AssetManager.add_resource_pack(r)
+
+        AssetManager.add_resource_pack("assets/default")
 
         # Spielsystem vorbereiten
         self.clock = pygame.time.Clock()
