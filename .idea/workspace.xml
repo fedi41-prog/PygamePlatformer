@@ -4,10 +4,457 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="add gitignore">
+    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="better texture loading - just without bugs hopefully...">
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/backgrounds/bg_castle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/backgrounds/bg_desert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/backgrounds/bg_grasslands.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/backgrounds/bg_shroom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/barnacle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/barnacle_bite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/barnacle_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/barnacle_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bat_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bat_fly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bat_hang.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bat_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bee_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bee_fly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/bee_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fishGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fishGreen_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fishGreen_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fishGreen_swim.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fishPink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fishPink_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fishPink_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fishPink_swim.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fly_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fly_fly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/fly_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/frog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/frog_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/frog_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/frog_leap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/ghost.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/ghost_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/ghost_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/ghost_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/grassBlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/grassBlock_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/grassBlock_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/grassBlock_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/ladyBug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/ladyBug_fly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/ladyBug_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/ladyBug_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/mouse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/mouse_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/mouse_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/mouse_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/piranha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/piranha_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/piranha_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/piranha_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slime.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeBlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeBlock_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeBlock_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeBlue_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeBlue_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeBlue_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeBlue_squashed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeGreen_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeGreen_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeGreen_squashed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slimeGreen_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slime_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slime_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slime_squashed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/slime_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snail_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snail_shell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snail_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snake.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snakeLava.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snakeLava_ani.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snakeLava_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snakeLava_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snakeSlime.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snakeSlime_ani.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snakeSlime_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snakeSlime_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snake_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snake_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/snake_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spider.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spider_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spider_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spider_walk1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spider_walk2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spinner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spinnerHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spinnerHalf_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spinnerHalf_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spinnerHalf_spin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spinner_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spinner_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/spinner_spin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/worm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/worm_dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/worm_hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/enemies/worm_walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/fonts/ArtPaperFont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/fonts/HackedFont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/fonts/HudFont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_coins.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_gem_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_gem_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_gem_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_gem_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_heartEmpty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_heartFull.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_heartHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_keyBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_keyBlue_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_keyGreem_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_keyGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_keyRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_keyRed_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_keyYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_keyYellow_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_p1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_p1Alt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_p2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_p2Alt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_p3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_p3Alt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_spritesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_spritesheet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/hud/hud_x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/bomb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/bombFlash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/bush.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/buttonBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/buttonBlue_pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/buttonGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/buttonGreen_pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/buttonRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/buttonRed_pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/buttonYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/buttonYellow_pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/cactus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/chain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/cloud1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/cloud2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/cloud3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/coinBronze.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/coinGold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/coinSilver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/fireball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagBlue2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagBlueHanging.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagGreen2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagGreenHanging.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagRed2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagRedHanging.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagYellow2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/flagYellowHanging.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/gemBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/gemGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/gemRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/gemYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/items_spritesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/items_spritesheet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/keyBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/keyGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/keyRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/keyYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/mushroomBrown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/mushroomRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/particleBrick1a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/particleBrick1b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/particleBrick2a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/particleBrick2b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/plantPurple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/rock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/snowhill.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/spikes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/springboardDown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/springboardUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/switchLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/switchMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/switchRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/weight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/items/weightChained.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_badge1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_badge2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_climb1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_climb2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_swim1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_swim2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_walk1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBeige_walk2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_badge1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_badge2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_climb1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_climb2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_swim1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_swim2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_walk1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienBlue_walk2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_badge1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_badge2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_climb1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_climb2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_swim1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_swim2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_walk1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienGreen_walk2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_badge1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_badge2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_climb1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_climb2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_swim1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_swim2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_walk1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienPink_walk2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_badge1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_badge2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_climb1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_climb2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_swim1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_swim2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_walk1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/player/alienYellow_walk2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxCoin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxCoinAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxCoinAlt_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxCoin_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxEmpty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxExplosive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxExplosiveAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxExplosive_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxItem.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxItemAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxItemAlt_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxItem_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/boxWarning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/brickWall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/bridge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/bridgeLogs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/castleRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/dirtRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/door_closedMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/door_closedTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/door_openMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/door_openTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/fence.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/fenceBroken.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/grassRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/hill_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/hill_largeAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/hill_small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/hill_smallAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/ladder_mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/ladder_top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/liquidLava.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/liquidLavaTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/liquidLavaTop_mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/liquidWater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/liquidWaterTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/liquidWaterTop_mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/lock_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/lock_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/lock_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/lock_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/rockHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/rockHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/ropeAttached.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/ropeHorizontal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/ropeVertical.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sandRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/sign.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/signExit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/signLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/signRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowHillLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowHillRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/snowRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneCenter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneCenter_rounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneCliffLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneCliffLeftAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneCliffRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneCliffRightAlt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneHalf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneHalfLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneHalfMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneHalfRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneHillLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneHillRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneLedgeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneLedgeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneMid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/stoneWall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/tiles_spritesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/tiles_spritesheet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/tochLit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/tochLit2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/torch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/WapkaPack/tiles/window.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +477,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="branch2" />
+        <entry key="$PROJECT_DIR$" value="texture-loading" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,7 +492,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/fedi41-prog/PygamePlatformer.git&quot;,
-    &quot;accountId&quot;: &quot;494dba3a-5552-4bc4-b945-890dfdf1288e&quot;
+    &quot;accountId&quot;: &quot;2b300452-0757-4bcc-adb6-98a5cfab6160&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -71,8 +518,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/default"
+    "git-widget-placeholder": "trying-new-textures",
+    "last_opened_file_path": "C:/Users/dvaga/PycharmProjects/PygamePlatformerrrr/GameV1/assets/WapkaPack/player"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -82,18 +529,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\default" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\base_pack" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\fonts" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\font" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\spritesheets" />
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr\GameV1\assets\WapkaPack\player" />
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr\GameV1\assets\WapkaPack" />
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr\GameV1\assets" />
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr\GameV1\assets\pack2\player" />
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr\GameV1\assets\pack1\player" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr\GameV1\assets\pack1\fonts" />
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr\GameV1\assets\pack1" />
+      <recent name="C:\Users\dvaga\PycharmProjects\PygamePlatformerrrr\GameV1\assets\pack1\backgrounds" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\default" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\base_pack" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\sprites\StaticBlocks" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\sprites" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +576,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -254,7 +701,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748771980799</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix the texture bag">
+      <option name="closed" value="true" />
+      <created>1748881192143</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1748881192143</updated>
+    </task>
+    <task id="LOCAL-00016" summary="better texture loading - just without bugs hopefully...">
+      <option name="closed" value="true" />
+      <created>1748883699445</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1748883699445</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +739,8 @@
     <MESSAGE value="differnt changes... like always:  &#10;new particle color, admin features, spectator mode, a bit changed map" />
     <MESSAGE value="created a texture-pack system with layers and removed spritesheets" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="fix the texture bag" />
+    <MESSAGE value="better texture loading - just without bugs hopefully..." />
+    <option name="LAST_COMMIT_MESSAGE" value="better texture loading - just without bugs hopefully..." />
   </component>
 </project>
