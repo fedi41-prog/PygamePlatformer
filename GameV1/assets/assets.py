@@ -7,15 +7,19 @@ class AssetManager:
     _fonts = {}  # Optional: flache Font-Tabelle, z. B. fuer direkte Abfrage
 
     @classmethod
-    def add_resource_pack(cls, folder_path):
+    def add_resource_pack(cls, folder_path, scale_faktor):
         """
         Fügt ein neues Texture-Pack hinzu. Lädt alle PNG-Bilder und Fonts (.ttf/.otf) aus dem Ordner.
         Optional: font_sizes = {"Fontname": [16, 24, 32], ...}
         """
-        texture_pack = {}
+        resource_pack = {}
 
         with open(folder_path + "/settings.json", "r") as f:
-            font_sizes = json.load(f)["font-sizes"]
+            settings = json.load(f)
+            font_sizes = settings["font-sizes"]
+            this_scale_faktor = settings["scale"]
+
+        scale_faktor /= this_scale_faktor
 
         for root, _, files in os.walk(folder_path):
             for filename in files:
@@ -24,7 +28,7 @@ class AssetManager:
                 name, ext = os.path.splitext(rel_path)
 
                 if ext.lower() == ".png":
-                    texture_pack[name] = pygame.image.load(path).convert_alpha()
+                    resource_pack[name] = pygame.transform.scale_by(pygame.image.load(path).convert_alpha(), (scale_faktor, scale_faktor))
 
                 elif ext.lower() in [".ttf", ".otf"]:
                     font_base = os.path.splitext(os.path.basename(name))[0]
@@ -32,10 +36,10 @@ class AssetManager:
                     for size in sizes:
                         key = f"fonts/{font_base}_{size}"
                         font = pygame.font.Font(path, size)
-                        texture_pack[key] = font
+                        resource_pack[key] = font
                         cls._fonts[key] = font  # Optional in zentrale Map
 
-        cls._resource_packs.append(texture_pack)
+        cls._resource_packs.append(resource_pack)
 
     @classmethod
     def get(cls, asset_name):

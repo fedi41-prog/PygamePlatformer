@@ -32,7 +32,7 @@ class GameScene:
         self.parallax = parallax
 
         # Kamera initialisieren
-        self.camera = Camera(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, self.level_length, self.level_height)
+        self.camera = Camera(game.scaled_width, game.scaled_height, self.level_length, self.level_height)
 
     def handle_events(self):
         for event in pygame.event.get():
@@ -70,15 +70,15 @@ class GameScene:
         view_rect = pygame.Rect(
             int(self.camera.offset.x),
             int(self.camera.offset.y),
-            VIRTUAL_WIDTH,
-            VIRTUAL_HEIGHT
+            self.game.scaled_width,
+            self.game.scaled_height
         )
 
         # Hintergrund kacheln und scrollen mit Parallax-Effekt
         bg_w, bg_h = self.background_image.get_size()
         offset_x = int(self.camera.offset.x * self.parallax) % bg_w
-        for x in range(-offset_x, VIRTUAL_WIDTH, bg_w):
-            for y in range(0, VIRTUAL_HEIGHT, bg_h):
+        for x in range(-offset_x, self.game.scaled_width, bg_w):
+            for y in range(0, self.game.scaled_height, bg_h):
                 screen.blit(self.background_image, (x, y))
 
         # Kombinierte Liste aller Objekte mit .rect und .draw
@@ -98,14 +98,14 @@ class GameScene:
         pygame.display.flip()
 
     @staticmethod
-    def generate_scene_from_xml(game, filename):
+    def generate_scene_from_xml(game, filename, scale_faktor):
         import xml.etree.ElementTree as ET
 
         tree = ET.parse(filename)
         root = tree.getroot()
 
-        length = int(root.get('length', 0))
-        height = int(root.get('height', 0))
+        length = int(root.get('length', 0)) * scale_faktor
+        height = int(root.get('height', 0)) * scale_faktor
 
         # Hintergrund
         bg_elem = root.find('Background')
@@ -116,12 +116,12 @@ class GameScene:
         pl = root.find('Player')
         player = Player(
             game=game,
-            x=int(pl.get('x', 0)),
-            y=int(pl.get('y', 0)),
+            x=int(pl.get('x', 0)) * scale_faktor,
+            y=int(pl.get('y', 0)) * scale_faktor,
             texture_key=pl.get('textures'),
-            gravity=float(pl.get("gravity")),
-            max_fall_speed=int(pl.get("max_fall_speed")),
-            jump_power=int(pl.get("jump_power"))
+            gravity=float(pl.get("gravity")) * scale_faktor,
+            max_fall_speed=int(pl.get("max_fall_speed")) * scale_faktor,
+            jump_power=int(pl.get("jump_power")) * scale_faktor
         )
 
         static_blocks = []
@@ -131,34 +131,34 @@ class GameScene:
         # Factory-Map, die für jeden Tag das richtige Objekt baut
         factories = {
             'StaticBlock': lambda e: StaticBlock(
-                x=int(e.get('x', 0)),
-                y=int(e.get('y', 0)),
+                x=int(e.get('x', 0)) * scale_faktor,
+                y=int(e.get('y', 0)) * scale_faktor,
                 texture=e.get('texture')
             ),
             'MovingBlock': lambda e: MovingBlock(
-                x=int(e.get('x', 0)),
-                y=int(e.get('y', 0)),
-                xd=int(e.get('xd', 0)),
-                yd=int(e.get('yd', 0)),
+                x=int(e.get('x', 0)) * scale_faktor,
+                y=int(e.get('y', 0)) * scale_faktor,
+                xd=int(e.get('xd', 0)) * scale_faktor,
+                yd=int(e.get('yd', 0)) * scale_faktor,
                 texture=e.get('texture'),
-                speed=int(e.get('speed', 2)),
+                speed=int(e.get('speed', 2)) * scale_faktor,
                 game=game
             ),
             'Flag': lambda e: Flag(
-                x=int(e.get('x', 0)),
-                y=int(e.get('y', 0)),
+                x=int(e.get('x', 0)) * scale_faktor,
+                y=int(e.get('y', 0)) * scale_faktor,
                 color=e.get('color'),
                 game=game
             ),
             'Coin': lambda e: Coin(
-                x=int(e.get('x', 0)),
-                y=int(e.get('y', 0)),
+                x=int(e.get('x', 0)) * scale_faktor,
+                y=int(e.get('y', 0)) * scale_faktor,
                 texture=e.get('texture'),
                 game=game
             ),
             'Deco': lambda e: Deco(
-                x=int(e.get('x', 0)),
-                y=int(e.get('y', 0)),
+                x=int(e.get('x', 0)) * scale_faktor,
+                y=int(e.get('y', 0)) * scale_faktor,
                 texture=e.get('texture'),
                 game=game
             ),

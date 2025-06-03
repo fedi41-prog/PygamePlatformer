@@ -12,8 +12,8 @@ class Player:
         self.gravity, self.max_fall_speed = gravity, max_fall_speed
         self.jump_power = jump_power
         self.normal_jump_power = jump_power
-        self.speed = 4
-        self.spectator_speed = 8
+        self.speed = 4 * self.game.scale_faktor
+        self.spectator_speed = 8 * self.game.scale_faktor
         self.texture_key = texture_key
         self.spectator = False
         self.hearts = 3
@@ -32,7 +32,7 @@ class Player:
         self.direction = "right"
 
         self.slam_active = False
-        self.slam_speed = 40
+        self.slam_speed = 40 * self.game.scale_faktor
         self.slam_cooldown = 0
 
         self.collision_resolver = CollisionResolver(gravity=self.gravity, max_fall_speed=self.max_fall_speed)

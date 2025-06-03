@@ -26,4 +26,6 @@ ADMIN_PASSWORD = [
     pygame.K_n
 ]
 
-RESOURCE_PACKS = []
+RESOURCE_PACKS = [
+    "assets/pack1"
+]

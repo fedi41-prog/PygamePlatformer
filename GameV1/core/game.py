@@ -1,3 +1,5 @@
+import json
+
 import pygame
 from GameV1.scenes.GameScene import GameScene
 from GameV1.settings import *
@@ -20,24 +22,33 @@ class Game:
         self.screen = pygame.display.set_mode((self.SCREEN_WIDTH, self.SCREEN_HEIGHT), pygame.SCALED)
         pygame.display.set_caption(TITLE)
 
+        # Asset-Manager vorbereiten
+        self.scale_faktor = 1
+
+        for i in RESOURCE_PACKS:
+            with open(i + "/settings.json", "r") as f:
+                self.scale_faktor = max(self.scale_faktor, json.load(f)["scale"])
+
+        for r in RESOURCE_PACKS:
+            AssetManager.add_resource_pack(r, self.scale_faktor)
+
+        AssetManager.add_resource_pack("assets/default", self.scale_faktor)
+
+        scaled_virtual_width = VIRTUAL_WIDTH * self.scale_faktor
+        scaled_virtual_height = VIRTUAL_HEIGHT * self.scale_faktor
+
         # Skalierungsfaktor berechnen, um das virtuelle Bild anzupassen
-        self.scale_factor = min(self.SCREEN_WIDTH / VIRTUAL_WIDTH, self.SCREEN_HEIGHT / VIRTUAL_HEIGHT)
-        self.scaled_width = int(VIRTUAL_WIDTH * self.scale_factor)
-        self.scaled_height = int(VIRTUAL_HEIGHT * self.scale_factor)
+        self.screen_scale_factor = min(self.SCREEN_WIDTH / scaled_virtual_width, self.SCREEN_HEIGHT / scaled_virtual_height)
+        self.scaled_width = int(scaled_virtual_width * self.screen_scale_factor)
+        self.scaled_height = int(scaled_virtual_height * self.screen_scale_factor)
 
         # Virtueller Bildschirm (die "echte" Spielauflösung)
-        self.virtual_screen = pygame.Surface((VIRTUAL_WIDTH, VIRTUAL_HEIGHT))
-
-        # Asset-Manager vorbereiten
-        for r in RESOURCE_PACKS:
-            AssetManager.add_resource_pack(r)
-
-        AssetManager.add_resource_pack("assets/default")
+        self.virtual_screen = pygame.Surface((scaled_virtual_width, scaled_virtual_height))
 
         # Spielsystem vorbereiten
         self.clock = pygame.time.Clock()
         self.running = True
-        self.scene = GameScene.generate_scene_from_xml(self, "scenes/scene2.xml")
+        self.scene = GameScene.generate_scene_from_xml(self, "scenes/scene2.xml", self.scale_faktor)
 
     def run(self):
         while self.running:
