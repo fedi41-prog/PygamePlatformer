@@ -6,6 +6,11 @@ class AssetManager:
     _resource_packs = []  # Liste von dicts: {"imgname": Surface, "fonts/fontname_size": Font, ...}
     _fonts = {}
     _global_scale = 1  # Globale Skalierung, wird durch das erste Pack mit "scale" gesetzt
+    _on_scale_change_callback = None  # Optional: Callback für Skalierungsänderungen
+
+    @classmethod
+    def set_scale_change_callback(cls, callback):
+        cls._on_scale_change_callback = callback
 
     @classmethod
     def add_resource_pack(cls, folder_path):
@@ -28,6 +33,10 @@ class AssetManager:
         # Falls noch keine globale Skalierung gesetzt wurde, übernehmen
         if cls._global_scale == 1:
             cls._global_scale = scale
+        elif scale != cls._global_scale:
+            cls._global_scale = scale
+            if cls._on_scale_change_callback:
+                cls._on_scale_change_callback(scale)
 
         for root, _, files in os.walk(folder_path):
             for filename in files:
@@ -75,4 +84,5 @@ class AssetManager:
         cls._resource_packs.clear()
         cls._fonts.clear()
         cls._global_scale = 1
+        cls._on_scale_change_callback = None
 

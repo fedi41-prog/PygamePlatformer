@@ -24,7 +24,10 @@ class Camera:
         # Sanftes Nachziehen per Interpolation
         self.offset += (self.target_offset - self.offset) * self.smoothing
 
-    def apply(self, rect):
+    def apply(self, rect, scale_faktor=3):
+        new_rect = rect.copy()
+        #new_rect.x = rect.x * scale_faktor
+        #new_rect.y = rect.y * scale_faktor
         # Verschiebe ein beliebiges Rect um die Kamera-Offset
-        return rect.move(-int(self.offset.x), -int(self.offset.y))
+        return new_rect.move(-int(self.offset.x), -int(self.offset.y))
 
