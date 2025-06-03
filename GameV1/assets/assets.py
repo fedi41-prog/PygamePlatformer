@@ -4,18 +4,30 @@ import json
 
 class AssetManager:
     _resource_packs = []  # Liste von dicts: {"imgname": Surface, "fonts/fontname_size": Font, ...}
-    _fonts = {}  # Optional: flache Font-Tabelle, z. B. fuer direkte Abfrage
+    _fonts = {}
+    _global_scale = 1  # Globale Skalierung, wird durch das erste Pack mit "scale" gesetzt
 
     @classmethod
     def add_resource_pack(cls, folder_path):
         """
-        Fügt ein neues Texture-Pack hinzu. Lädt alle PNG-Bilder und Fonts (.ttf/.otf) aus dem Ordner.
-        Optional: font_sizes = {"Fontname": [16, 24, 32], ...}
+        Fügt ein neues Texture-Pack hinzu. Lädt PNG-Bilder und Fonts (.ttf/.otf) aus dem Ordner.
+        Erwartet eine settings.json mit "font-sizes" und optional "scale".
         """
         texture_pack = {}
 
-        with open(folder_path + "/settings.json", "r") as f:
-            font_sizes = json.load(f)["font-sizes"]
+        settings_path = os.path.join(folder_path, "settings.json")
+        font_sizes = {}
+        scale = 1
+
+        if os.path.exists(settings_path):
+            with open(settings_path, "r") as f:
+                settings = json.load(f)
+                font_sizes = settings.get("font-sizes", {})
+                scale = settings.get("scale", 1)
+
+        # Falls noch keine globale Skalierung gesetzt wurde, übernehmen
+        if cls._global_scale == 1:
+            cls._global_scale = scale
 
         for root, _, files in os.walk(folder_path):
             for filename in files:
@@ -24,22 +36,26 @@ class AssetManager:
                 name, ext = os.path.splitext(rel_path)
 
                 if ext.lower() == ".png":
-                    texture_pack[name] = pygame.image.load(path).convert_alpha()
+                    image = pygame.image.load(path).convert_alpha()
+                    if scale != 1:
+                        new_size = (round(image.get_width() * scale), round(image.get_height() * scale))
+                        image = pygame.transform.scale(image, new_size)
+                    texture_pack[name] = image
 
                 elif ext.lower() in [".ttf", ".otf"]:
                     font_base = os.path.splitext(os.path.basename(name))[0]
-                    sizes = font_sizes.get(font_base, [24])  # Standardgröße
+                    sizes = font_sizes.get(font_base, [24])
                     for size in sizes:
+                        scaled_size = round(size * scale)
                         key = f"fonts/{font_base}_{size}"
-                        font = pygame.font.Font(path, size)
+                        font = pygame.font.Font(path, scaled_size)
                         texture_pack[key] = font
-                        cls._fonts[key] = font  # Optional in zentrale Map
+                        cls._fonts[key] = font
 
         cls._resource_packs.append(texture_pack)
 
     @classmethod
     def get(cls, asset_name):
-        """Sucht Bild oder Font in allen Texture-Packs."""
         for pack in cls._resource_packs:
             if asset_name in pack:
                 return pack[asset_name]
@@ -47,11 +63,16 @@ class AssetManager:
 
     @classmethod
     def get_font(cls, name, size):
-        """Holt Font mit Format: get_font("Fontname", 24)"""
         key = f"fonts/{name}_{size}"
         return cls.get(key)
+
+    @classmethod
+    def get_scale(cls):
+        return cls._global_scale
 
     @classmethod
     def clear(cls):
         cls._resource_packs.clear()
         cls._fonts.clear()
+        cls._global_scale = 1
+

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="add gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/hd/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/hd/tiles/boxAlt.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/assets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +73,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/default"
+    "git-widget-placeholder": "texture-loading",
+    "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/hd/tiles"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -82,11 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\hd\tiles" />
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\hd" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\default" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\base_pack" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\fonts" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\font" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\spritesheets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets" />
@@ -254,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748771980799</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="flipping out">
+      <option name="closed" value="true" />
+      <created>1748934913410</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1748934913410</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +286,7 @@
     <MESSAGE value="differnt changes... like always:  &#10;new particle color, admin features, spectator mode, a bit changed map" />
     <MESSAGE value="created a texture-pack system with layers and removed spritesheets" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="flipping out" />
+    <option name="LAST_COMMIT_MESSAGE" value="flipping out" />
   </component>
 </project>
