@@ -1,12 +1,12 @@
 import pygame
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 
 class Flag:
     def __init__(self, x, y, color, game):
         self.game = game
         self.color = color
         # Initiale hängende Grafik laden
-        self.image = AssetManager.get(f"items/flag{color}Hanging")
+        self.image = AssetsManager.get(f"items/flag{color}Hanging.png")
         self.rect = self.image.get_rect(topleft=(x, y))
         # Maske aus dem Bild (transparente Pixel werden ignoriert)
         self.mask = pygame.mask.from_surface(self.image)
@@ -31,10 +31,10 @@ class Flag:
             if self.step >= 1:
                 # Bild wechseln
                 if self.img_nr == 0:
-                    self.image = AssetManager.get(f"items/flag{self.color}")
+                    self.image = AssetsManager.get(f"items/flag{self.color}.png")
                     self.img_nr = 1
                 else:
-                    self.image = AssetManager.get(f"items/flag{self.color}2")
+                    self.image = AssetsManager.get(f"items/flag{self.color}2.png")
                     self.img_nr = 0
                 # Maske neu erzeugen, damit Animation auch korrekt kollidiert (falls nötig)
                 self.mask = pygame.mask.from_surface(self.image)

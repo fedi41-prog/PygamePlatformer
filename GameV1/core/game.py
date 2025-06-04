@@ -1,7 +1,7 @@
 import pygame
 from GameV1.scenes.GameScene import GameScene
 from GameV1.settings import *
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 
 class Game:
     def __init__(self):
@@ -29,10 +29,30 @@ class Game:
         self.virtual_screen = pygame.Surface((VIRTUAL_WIDTH, VIRTUAL_HEIGHT))
 
         # Asset-Manager vorbereiten
-        for r in RESOURCE_PACKS:
-            AssetManager.add_resource_pack(r)
+        AssetsManager.set_assets_root("assets/")
 
-        AssetManager.add_resource_pack("assets/default")
+        for r in RESOURCE_PACKS:
+            AssetsManager.load_resource_pack(r)
+
+        AssetsManager.load_resource_pack("default")
+
+        # 3. Maximalen Scale berechnen
+        AssetsManager.finalize_packs()
+        print("--- Packs & ihre Scales ---")
+        for p in AssetsManager.pack_order:
+            print(f"Pack '{p}': scale = {AssetsManager.pack_scales[p]}")
+        print("→ max_scale =", AssetsManager.max_scale, "\n")
+
+        # 4. Texturen laden
+        AssetsManager.load_textures()
+
+        # 5. Debug: Liste aller geladenen Keys in textures ausgeben
+        print("--- Geladene Texturen ---")
+        if not AssetsManager.textures:
+            print(">>> KEINE Texture gefunden! Überprüfe Pfade und Dateien.")
+        else:
+            for key in AssetsManager.textures:
+                print("  •", key)
 
         # Spielsystem vorbereiten
         self.clock = pygame.time.Clock()

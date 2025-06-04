@@ -1,11 +1,11 @@
 import pygame
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 
 
 class Deco:
     def __init__(self, x, y, texture, game):
         self.game = game
-        self.image = AssetManager.get(texture)
+        self.image = AssetsManager.get(texture)
 
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)

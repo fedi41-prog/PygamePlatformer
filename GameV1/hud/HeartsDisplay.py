@@ -1,6 +1,6 @@
 import pygame
 
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 from GameV1.settings import VIRTUAL_WIDTH, VIRTUAL_HEIGHT
 
 
@@ -11,9 +11,9 @@ class HeartsDisplay:
 
         self.hearts = 0
 
-        self.image_full = AssetManager.get("hud/hud_heartFull")
-        self.image_half = AssetManager.get("hud/hud_heartHalf")
-        self.image_empty = AssetManager.get("hud/hud_heartEmpty")
+        self.image_full = AssetsManager.get("hud/hud_heartFull.png")
+        self.image_half = AssetsManager.get("hud/hud_heartHalf.png")
+        self.image_empty = AssetsManager.get("hud/hud_heartEmpty.png")
 
 
     def update(self):

@@ -1,6 +1,6 @@
 import pygame
 
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 from GameV1.core.camera import Camera
 from GameV1.hud.HUDManager import HUDManager
 from GameV1.sprites.Entities.coin import Coin
@@ -109,7 +109,7 @@ class GameScene:
 
         # Hintergrund
         bg_elem = root.find('Background')
-        bg_img = AssetManager.get(bg_elem.get('texture'))
+        bg_img = AssetsManager.get(bg_elem.get('texture'))
         parallax = float(bg_elem.get('parallax', 0.5))
 
         # Spieler

@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="add gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pygame-platformer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a4f10440-f229-437b-ba92-68d4b43edc16" name="Changes" comment="flipping out (3rd time)">
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/hdPack/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/assets/hdPack/tiles/lock_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameV1/core/gameRenderer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/assets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/assets/default/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/assets/default/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/core/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/core/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/hud/HUDManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/hud/HUDManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/hud/HeartsDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/hud/HeartsDisplay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/hud/adminDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/hud/adminDisplay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/hud/coinDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/hud/coinDisplay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/GameScene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/scenes/scene2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/scenes/scene2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/coin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/deco.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/deco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/Entities/flag.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/Entities/flag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/StaticBlocks/staticblock.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/StaticBlocks/staticblock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/UpdateBlocks/MovingBlock.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/UpdateBlocks/MovingBlock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameV1/sprites/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameV1/sprites/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +47,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="branch2" />
+        <entry key="$PROJECT_DIR$" value="texture-loading" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +61,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/fedi41-prog/PygamePlatformer.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/fedi41-prog/PygamePlatformer&quot;,
     &quot;accountId&quot;: &quot;494dba3a-5552-4bc4-b945-890dfdf1288e&quot;
   }
 }</component>
@@ -60,33 +77,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Morse Code.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.game.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.run_game.executor": "Run",
-    "Python.уравнение.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Morse Code.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.уравнение.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;better-resource-loading&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/croco/PycharmProjects/Pygame-platformer/GameV1/assets/hdPack/tiles&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\hdPack\tiles" />
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets" />
+      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\hdPack" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\default" />
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\base_pack" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\fonts" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\font" />
-      <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets\images\spritesheets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\croco\PycharmProjects\Pygame-platformer\GameV1\assets" />

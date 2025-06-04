@@ -1,5 +1,5 @@
 import pygame
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 from GameV1.hud.HeartsDisplay import HeartsDisplay
 from GameV1.hud.adminDisplay import AdminDisplay
 from GameV1.hud.coinDisplay import CoinDisplay

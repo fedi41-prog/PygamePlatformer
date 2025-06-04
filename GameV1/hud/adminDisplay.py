@@ -1,6 +1,6 @@
 import pygame
 
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 from GameV1.settings import VIRTUAL_WIDTH, VIRTUAL_HEIGHT
 
 
@@ -9,7 +9,7 @@ class AdminDisplay:
         self.game = game
         self.position = pos
 
-        self.font = AssetManager.get_font("HackedFont", 50)
+        self.font = AssetsManager.get_font("fonts/HackedFont.ttf", 50)
 
     def update(self):
         pass  # Falls etwas animiert oder dynamisch ist

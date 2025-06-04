@@ -1,62 +1,64 @@
 <GameScene length="5000" height="2000">
 
     <Player textures="alienGreen" x="270" y="1150" gravity="0.8" max_fall_speed="15" jump_power="15"/>
-    <Background texture="backgrounds/bg_grasslands" parallax="0.3"/>
+    <Background texture="backgrounds/bg_grasslands.png" parallax="0.3"/>
 
     <Sprites>
-        <StaticBlock texture="tiles/grassLeft" x="200" y="1300"/>
-        <StaticBlock texture="tiles/grassMid" x="270" y="1300"/>
-        <StaticBlock texture="tiles/grassMid" x="340" y="1300"/>
-        <StaticBlock  texture="tiles/grassMid" x="410" y="1300"/>
-        <StaticBlock  texture="tiles/boxAlt" x="410" y="1230"/>
-        <StaticBlock  texture="tiles/grassMid" x="480" y="1300"/>
-        <StaticBlock  texture="tiles/grassMid" x="550" y="1300"/>
-        <StaticBlock  texture="tiles/boxItem" x="570" y="1110"/>
-        <Coin texture="items/coinGold" x="570" y="1040"/>
-        <Deco texture="items/bush" x="570" y="1230"/>
-        <StaticBlock texture="tiles/grassMid" x="620" y="1300"/>
-        <StaticBlock texture="tiles/grassHillLeft2" x="690" y="1300"/>
-        <StaticBlock texture="tiles/grassHillLeft" x="690" y="1230"/>
-        <StaticBlock texture="tiles/grassCenter" x="760" y="1300"/>
-        <StaticBlock texture="tiles/grassMid" x="760" y="1230"/>
-        <StaticBlock texture="tiles/boxExplosive" x="760" y="1020"/>
+        <StaticBlock texture="tiles/lock_green.png" x="0" y="1230"/>
+
+        <StaticBlock texture="tiles/grassLeft.png" x="200" y="1300"/>
+        <StaticBlock texture="tiles/grassMid.png" x="270" y="1300"/>
+        <StaticBlock texture="tiles/grassMid.png" x="340" y="1300"/>
+        <StaticBlock  texture="tiles/grassMid.png" x="410" y="1300"/>
+        <StaticBlock  texture="tiles/boxAlt.png" x="410" y="1230"/>
+        <StaticBlock  texture="tiles/grassMid.png" x="480" y="1300"/>
+        <StaticBlock  texture="tiles/grassMid.png" x="550" y="1300"/>
+        <StaticBlock  texture="tiles/boxItem.png" x="570" y="1110"/>
+        <Coin texture="items/coinGold.png" x="570" y="1040"/>
+        <Deco texture="items/bush.png" x="570" y="1230"/>
+        <StaticBlock texture="tiles/grassMid.png" x="620" y="1300"/>
+        <StaticBlock texture="tiles/grassHillLeft2.png" x="690" y="1300"/>
+        <StaticBlock texture="tiles/grassHillLeft.png" x="690" y="1230"/>
+        <StaticBlock texture="tiles/grassCenter.png" x="760" y="1300"/>
+        <StaticBlock texture="tiles/grassMid.png" x="760" y="1230"/>
+        <StaticBlock texture="tiles/boxExplosive.png" x="760" y="1020"/>
 
 
-        <MovingBlock texture="tiles/castleHalf" x="830" y="1020" xd="830" yd="300" speed="5"/>
-        <StaticBlock texture="tiles/castleHalfRight" x="760" y="300"/>
-        <StaticBlock texture="tiles/castleHalfMid" x="690" y="300"/>
-        <StaticBlock texture="tiles/castleHalfLeft" x="620" y="300"/>
-        <Coin texture="items/coinGold" x="620" y="230"/>
-        <Coin texture="items/coinGold" x="620" y="160"/>
-        <Coin texture="items/coinGold" x="690" y="230"/>
-        <Coin texture="items/coinGold" x="690" y="160"/>
-        <Coin texture="items/coinGold" x="760" y="230"/>
-        <Coin texture="items/coinGold" x="760" y="160"/>
-        <Coin texture="items/coinGold" x="620" y="90"/>
-        <Coin texture="items/coinGold" x="620" y="20"/>
-        <Coin texture="items/coinGold" x="690" y="90"/>
-        <Coin texture="items/coinGold" x="690" y="20"/>
-        <Coin texture="items/coinGold" x="760" y="90"/>
-        <Coin texture="items/coinGold" x="760" y="20"/>
+        <MovingBlock texture="tiles/castleHalf.png" x="830" y="1020" xd="830" yd="300" speed="5"/>
+        <StaticBlock texture="tiles/castleHalfRight.png" x="760" y="300"/>
+        <StaticBlock texture="tiles/castleHalfMid.png" x="690" y="300"/>
+        <StaticBlock texture="tiles/castleHalfLeft.png" x="620" y="300"/>
+        <Coin texture="items/coinGold.png" x="620" y="230"/>
+        <Coin texture="items/coinGold.png" x="620" y="160"/>
+        <Coin texture="items/coinGold.png" x="690" y="230"/>
+        <Coin texture="items/coinGold.png" x="690" y="160"/>
+        <Coin texture="items/coinGold.png" x="760" y="230"/>
+        <Coin texture="items/coinGold.png" x="760" y="160"/>
+        <Coin texture="items/coinGold.png" x="620" y="90"/>
+        <Coin texture="items/coinGold.png" x="620" y="20"/>
+        <Coin texture="items/coinGold.png" x="690" y="90"/>
+        <Coin texture="items/coinGold.png" x="690" y="20"/>
+        <Coin texture="items/coinGold.png" x="760" y="90"/>
+        <Coin texture="items/coinGold.png" x="760" y="20"/>
 
-        <StaticBlock texture="tiles/castleHalfRight" x="410" y="230"/>
-        <StaticBlock texture="tiles/castleHalfLeft" x="340" y="230"/>
+        <StaticBlock texture="tiles/castleHalfRight.png" x="410" y="230"/>
+        <StaticBlock texture="tiles/castleHalfLeft.png" x="340" y="230"/>
         <Flag color="Green" x="380" y="160"/>
 
 
-        <StaticBlock texture="tiles/grassHillRight2" x="830" y="1300"/>
-        <StaticBlock texture="tiles/grassHillRight" x="830" y="1230"/>
-        <StaticBlock texture="tiles/grassMid" x="900" y="1300"/>
+        <StaticBlock texture="tiles/grassHillRight2.png" x="830" y="1300"/>
+        <StaticBlock texture="tiles/grassHillRight.png" x="830" y="1230"/>
+        <StaticBlock texture="tiles/grassMid.png" x="900" y="1300"/>
 
-        <StaticBlock texture="tiles/grassMid" x="970" y="1300"/>
-        <Deco texture="items/plant" x="970" y="1230"/>
-        <StaticBlock texture="tiles/grassMid" x="1040" y="1300"/>
-        <StaticBlock texture="tiles/grassLedgeRight" x="1110" y="1300"/>
+        <StaticBlock texture="tiles/grassMid.png" x="970" y="1300"/>
+        <Deco texture="items/plant.png" x="970" y="1230"/>
+        <StaticBlock texture="tiles/grassMid.png" x="1040" y="1300"/>
+        <StaticBlock texture="tiles/grassLedgeRight.png" x="1110" y="1300"/>
 
-        <MovingBlock texture="enemies/slimeBlock" x="1110" y="1300" xd="2000" yd="1300" speed="3"/>
+        <MovingBlock texture="enemies/slimeBlock.png" x="1110" y="1300" xd="2000" yd="1300" speed="3"/>
 
-        <StaticBlock texture="tiles/stoneLeft" x="2050" y="1300"/>
-        <StaticBlock texture="tiles/stoneRight" x="2120" y="1300"/>
+        <StaticBlock texture="tiles/stoneLeft.png" x="2050" y="1300"/>
+        <StaticBlock texture="tiles/stoneRight.png" x="2120" y="1300"/>
 
         <Flag color="Red"  x="2120" y="1230"/>
 

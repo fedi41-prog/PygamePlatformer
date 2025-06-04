@@ -1,7 +1,7 @@
 import pygame
 
 from GameV1.tools.tools import any_true
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 from GameV1.settings import KEYMAP
 from GameV1.tools.collisionhelper import CollisionResolver
 
@@ -18,9 +18,9 @@ class Player:
         self.spectator = False
         self.hearts = 3
 
-        self.walkAnimation = ["_walk1", "_walk2"]
+        self.walkAnimation = ["_walk1.png", "_walk2.png"]
         self.walkStep = 0
-        self.image = AssetManager.get("player/" + self.texture_key + "_stand")
+        self.image = AssetsManager.get("player/" + self.texture_key + "_stand.png")
 
         self.rect = self.image.get_rect(topleft=(x, y))
         self.home_pos = (x, y)
@@ -115,18 +115,18 @@ class Player:
 
     def update_image(self):
         if not self.on_ground:
-            self.image = AssetManager.get("player/" + self.texture_key + "_jump")
+            self.image = AssetsManager.get("player/" + self.texture_key + "_jump.png")
         elif self.velocity.x != 0:
-            self.image = AssetManager.get("player/" + self.texture_key + self.walkAnimation[int(self.walkStep)])
+            self.image = AssetsManager.get("player/" + self.texture_key + self.walkAnimation[int(self.walkStep)])
             self.walkStep += 0.125
             if self.walkStep >= len(self.walkAnimation):
                 self.walkStep = 0
         else:
             if self.slam_cooldown <= 0:
-                self.image = AssetManager.get("player/" + self.texture_key + "_stand")
+                self.image = AssetsManager.get("player/" + self.texture_key + "_stand.png")
             else:
                 # Hole das Duck-Bild
-                duck_image = AssetManager.get("player/" + self.texture_key + "_duck")
+                duck_image = AssetsManager.get("player/" + self.texture_key + "_duck.png")
 
                 # Erstelle Surface mit voller Spielergröße und zentriere duck_image unten
                 full_size_image = pygame.Surface(self.image.get_size(), pygame.SRCALPHA)

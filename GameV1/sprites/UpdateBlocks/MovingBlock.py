@@ -1,9 +1,9 @@
 import pygame
-from GameV1.assets.assets import AssetManager
+from GameV1.assets.assets import AssetsManager
 
 class MovingBlock:
     def __init__(self, game, x, y, xd, yd, texture, speed=2):
-        self.image = AssetManager.get(texture)
+        self.image = AssetsManager.get(texture)
         self.mask  = pygame.mask.from_surface(self.image)
 
         self.game = game
